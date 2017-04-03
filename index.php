@@ -1,17 +1,20 @@
+<?php
+    $data = json_decode(file_get_contents("data.json"), true);
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta name='viewport' content='width=320,initial-scale=1,user-scalable=0'>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="author" content="Johan Groenen (c) 2015">
+        <meta name="author" content="Johan Groenen (c) 2017">
         
         <link rel='image_src' href='http://www.jgroenen.nl/img/linkedin.jpg'/>
         <link rel='shortcut icon' type='image/png' href='http://www.jgroenen.nl/img/configuration02.png'>
         
-        <title>Johan Groenen | Data services & web apps</title>
-        <meta name="title" content="Johan Groenen | Data services & web apps">
-        <meta name="description" content="Advies en ontwikkeling op het gebied van data services en web apps.">
-        <meta name="keywords" content="johan, groenen, data, service, API, architectuur, cloud, mobiel, web, app, applicatie, advies, ontwikkeling, UX, coding, programmeur, rotterdam">
+        <title>Johan Groenen | innovatie(&)strategie</title>
+        <meta name="title" content="Johan Groenen | innovatie(&)strategie">
+        <meta name="description" content="Design thinking en lean startup advies en begeleiding voor (in-house) digitale start-ups.">
+        <meta name="keywords" content="digital, innovation, transformation, data services, api, architecture, web apps, digital strategy, startups, accelerator, incubator, amsterdam, rotterdam, web application development, systems architecture">
         
         <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
@@ -37,9 +40,9 @@
         <div class="wrapper">
             <header>
                 <h1 itemprop="name">Johan Groenen</h1>
-                <h2 class="no-print" itemprop="title">data services &<br> web apps</h2>
+                <h2 class="no-print" itemprop="title">innovatie(&)strategie</h2>
                 <img class="photo no-print" src="img/linkedin.jpg" alt="">
-                <h3 class="no-print">Innovatiestrateeg. Code for NL fellow 2015. Ervaren scrummaster, product owner en development lead. Agile web ontwikkelaar gespecialiseerd in data services en web apps. Organisator van Open Hack. <i>"The proof of the pudding is in the eating."</i></h3>
+                <h3 class="no-print">Co-founder en strateeg @TiltShift. Fellow Code for NL / Code for Europe.</i></h3>
                 <section class="contact">
                     <div>
                         <img class="icon" src="img/home.png" alt="Adres: " style="float: left">
@@ -62,7 +65,7 @@
                         <span style="display: inline-block; width: 210px; vertical-align: top; padding-top: 6px">
                             <a style="line-height: 1.4em" href="http://www.linkedin.com/in/jgroenen/nl">www.linkedin.com/in/jgroenen</a>
                             <a  class="no-print" style="line-height: 1.4em" href="https://twitter.com/jpagroenen"><br>www.twitter.com/jpagroenen</a>
-                            <a  class="no-print" style="line-height: 1.4em" href="http://apitecture.blogspot.nl/"><br>apitecture.blogspot.nl</a>
+                            <!--<a  class="no-print" style="line-height: 1.4em" href="http://apitecture.blogspot.nl/"><br>apitecture.blogspot.nl</a>-->
                             <a  class="no-print" style="line-height: 1.4em" href="https://github.com/jgroenen"><br>github.com/jgroenen</a>
                         </span>
                     </p>
@@ -78,122 +81,28 @@
             </header>
             <main>
                 <section>
-                    <h1><img class="icon" src="img/briefcase.png" alt="">Ervaring</h1>
-                    <section class="ervaring">
-                        <header>
-                            <h2 itemprop="affiliation">TiltShift</h2>
-                            <h1>Innovatiestrateeg</h1>
-                            <p>Amsterdam, 2016 - heden</p>
-                            <p><a href="http://www.tiltshift.nl">www.tiltshift.nl</a></p>
-                        </header>
-                        <main>
-                            <p>Gemeentes vinden innovatie moeilijk. Wij houden van moeilijk!</p>
-                            <p>Snelle innovatie die werkt!</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
+                    <h1><img class="icon" src="img/briefcase.png" alt="">Projecten</h1>
                     
+                    <?php foreach ($data["projecten"] as $e) { ?>
                     <section class="ervaring">
                         <header>
-                            <h2 itemprop="affiliation">Bookarang</h2>
-                            <h1>Machine Learning specialist</h1>
-                            <p>Amsterdam, 2016 - heden</p>
-                            <p><a href="http://www.bookarang.com">www.bookarang.com</a></p>
+                            <h2 itemprop="affiliation"><?=$e["bedrijf"]?></h2>
+                            <h1><?=$e["project"]?></h1>
+                            <p><?=$e["periode"]?></p>
+                            <p><a href="<?=$e["link"]?>"><?=$e["link"]?></a></p>
                         </header>
                         <main>
-                            <p>Bookarang combineert liefde voor literatuur met kennis van kunstmatige intelligentie. Retailers en bibliotheken gebruiken onze technologie om hun lezers écht goede boekaanbevelingen te kunnen doen. Niet op basis van populariteit of andermans gedrag, maar met de inhoud van het boek en de voorkeuren van de lezer als uitgangspunt.</p>
+                            <p><?=$e["omschrijving"]?></p>
                         </main>
                         <div class="clear"></div>
                     </section>
-                    
-                    <section class="ervaring">
-                        <header>
-                            <h2 itemprop="affiliation">Fixxx, DataLab Amsterdam, gemeente Amsterdam</h2>
-                            <h1>Innovatiestrateeg</h1>
-                            <p>Amsterdam, 2015 - heden</p>
-                            <p><a href="http://www.datalabamsterdam.nl">www.datalabamsterdam.nl</a></p>
-                        </header>
-                        <main>
-                            <p>DataLab Amsterdam is een werkplaats, kenniscentrum en partner voor datavraagstukken in Amsterdam. We bieden advies, dataleveringen en innovatieve oplossingen voor de stad.</p>
-                            <p>Fixxx staat voor <i>Fast Innovation Amsterdam</i>. We werken op locatie. Voornamelijk op straat, in de stad, om persoonlijk de problemen te ervaren. We gaan in gesprek met alle betrokkenen om de situatie goed in kaart te brengen. In korte, intensieve sprints ontwikkelen we samen werkende applicaties. En die testen we direct in de praktijk.</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
-                    
-                    <section class="ervaring">
-                        <header>
-                            <h2 itemprop="affiliation">Verkeer en Openbare Ruimte, gemeente Amsterdam</h2>
-                            <h1>Code for NL fellow</h1>
-                            <p>Amsterdam, 2015 - 2016</p>
-                            <p><a href="http://www.codefor.nl">www.codefor.nl</a></p>
-                        </header>
-                        <main>
-                            <p><i>Met Code for NL sluit Nederland zich aan bij een wereldwijd netwerk van civic innovators dat technologie inzet om overheden te versterken en burgerparticipatie te vergroten.</i></p>
-                            <p>Binnen de RvE Verkeer en Openbare Ruimte zijn een aantal challenges geformuleerd. Als Code for NL fellow is mijn opdracht om deze challenges samen met alle stakeholders goed in kaart te brengen. Hierna ontwikkel ik oplossingen met behulp van de beschikbare open data en geschikte technieken in snelle iteraties (Agile). Vanwege de grote overlap in doelstelling en methodiek heb ik aansluiting gezocht bij het DataLab, vanuit waar ik deze challenges nu aanpak.</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
-                    
-                    <section class="ervaring">
-                        <header>
-                            <h2>The Next Ad</h2>
-                            <h1>Lead Software Engineer</h1>
-                            <p>Amsterdam, 2014 - 2015</p>
-                            <p><a href="http://www.thenextad.com">www.thenextad.com</a></p>
-                        </header>
-                        <main>
-                            <p><i>The Next Ad (TNA) is een performance-advertising platform voor social media. TNA stelt grootschalige adverteerders in staat om hun advertentiebudgetten geautomatiseerd te optimaliseren op basis van succes- en doelgroepanalyse.</i></p>
-                            <p>Vanuit mijn positie als senior software engineer bij Media Injection werd ik door de CEO gevraagd om deze spin-off te helpen starten. In eerste instantie was ik verantwoordelijk voor het opbouwen van een nieuw developmentteam, het uitwerken van de technische architectuur en de optimalisatiemechanismes. Toen de basis stond, kwam de nadruk meer te liggen op het plannen van de strategie, de overall architectuur, de product backlog, het organiseren van de sprints als Scrum master en het aansturen van het team.</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
-                    
-                    <section class="ervaring">
-                        <header>
-                            <h2>Media Injection</h2>
-                            <h1>Sr Software Engineer</h1>
-                            <p>Amsterdam, 2013 - 2015</p>
-                            <p><a href="http://www.mediainjection.com">www.mediainjection.com</a></p>
-                        </header>
-                        <main>
-                            <p><i>Media Injection Connect is een social media managementplatform voor nationale en internationale top-500 bedrijven en organisaties. Dit platform stelt de gebruikers in staat om al hun sociale media interacties en campagnes voor meerdere merken, landen, etc. vanuit één plek te monitoren, analyseren en inplannen.</i></p>
-                            <p>Vanwege snelle groei van het aantal gebruikers en de hoeveelheid data die door de servers verwerkt moest worden, was een grote herziening van het bestaande systeemontwerp nodig. Als senior software engineer was ik mede verantwoordelijk voor het ontwikkelen van een nieuwe systeemarchitectuur op basis van web services, het specificeren van de diverse API's, en het definiëren en plannen van de diverse fases van de transitie van de oude naar de nieuwe architectuur. Daarnaast was ik als Scrum productowner verantwoordelijk voor het projectmanagement van de naar China geoutsourcete ontwikkeling van de MI Connect app, die aansloot op deze nieuwe APIs.</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
-                    
-                    <section class="ervaring">
-                        <header>
-                            <h2>Thirdwave</h2>
-                            <h1>Sr Web Developer</h1>
-                            <p>Leiden, 2009 - 2013</p>
-                            <p><a href="http://www.thirdwave.nl">www.thirdwave.nl</a></p>
-                        </header>
-                        <main>
-                            <p><i>Thirdwave specialiseert zich in de ontwikkeling van op maat gemaakte webapplicaties, dataservices en -koppelingen, intranetten en web apps voor middelgrote tot zeer grote organisaties.</i></p>
-                            <p>Bij een groot aantal projecten was ik verantwoordelijk voor zeer uiteenlopende zaken zoals planning, requirements-analyse, UX en workflow ontwerp, technische architectuur en applicatie-ontwikkeling. Door de grote diversiteit in klanten en applicaties heb ik in korte tijd intensief kennis kunnen maken met alle aspecten van web ontwikkeling en de manier waarop verschillende organisaties omgaan met dit ontwikkelproces.</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
-                    
-                    <section class="ervaring">
-                        <header>
-                            <h2>Universiteit Leiden</h2>
-                            <h1>Assistent en werkgroepdocent Computer Science</h1>
-                            <p>Leiden, 2006 - 2009</p>
-                            <p><a href="http://www.liacs.nl">www.liacs.nl</a></p>
-                        </header>
-                        <main>
-                            <p>Tijdens mijn studie was ik assistent en werkgroepdocent voor de vakken logica, programmeermethoden, compiler-constructie, digitale technieken en computerarchitectuur. </p>
-                            <p> Ook was ik korte tijd webmaster (redactie en onderhoud) voor de faculteit Wiskunde en Natuurwetenschappen.</p>
-                            <p>Daarnaast was ik onder meer lid van de faculteitsraad voor Wiskunde en Natuurwetenschappen en lid van de onderwijscommissie voor Computer Science.</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
+                    <?php } ?>
                 </section>
                 
                 <section>
                     <h1><img class="icon" src="img/bookmark.png" alt="">Opleiding</h1>
+                    
+                    <?php foreach ($data["ervaring"] as $e) { ?>
                     <section class="opleiding">
                         <header>
                             <h2>Universiteit Leiden</h2>
@@ -207,6 +116,7 @@
                         </main>
                         <div class="clear"></div>
                     </section>
+                    <?php } ?>
                     
                     <section class="opleiding">
                         <header>
