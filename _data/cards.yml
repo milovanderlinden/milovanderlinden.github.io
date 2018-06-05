@@ -1,3 +1,10 @@
+- name: Apitecture
+  logo: /assets/img/apitecture.png
+  role: Eigenaar
+  description: "Apitecture bouwt intelligente data services."
+  tagline: "Breng data tot leven."
+  url: https://www.apitecture.nl
+  color: FF5901
 - name: TiltShift
   logo: /assets/img/tiltshift.jpg
   role: Co-founder
@@ -12,13 +19,6 @@
   tagline: "Samenwerken aan de digitale overheid."
   url: http://codefor.nl
   color: 51D59D
-- name: Apitecture
-  logo: /assets/img/apitecture.png
-  role: Oprichter
-  description: "Apitecture bouwt intelligente data services."
-  tagline: "Breng data tot leven."
-  url: https://www.apitecture.nl
-  color: FF5901
 - name: Open Hack
   logo: /assets/img/openhack.png
   role: Organisator
