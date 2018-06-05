@@ -1,0 +1,28 @@
+- name: TiltShift
+  logo: /assets/img/tiltshift.jpg
+  role: Co-founder
+  description: "TiltShift helpt gemeenten bij digitale transformatie."
+  tagline: "Haal innovatie in huis!"
+  url: http://www.tiltshift.nl
+  color: F95A5D;
+- name: Code for NL
+  logo: /assets/img/codefornl.png
+  role: Bestuurslid
+  description: "Code for NL is een netwerk van developers en designers."
+  tagline: "Samenwerken aan de digitale overheid."
+  url: http://codefor.nl
+  color: 51D59D
+- name: Apitecture
+  logo: /assets/img/apitecture.png
+  role: Oprichter
+  description: "Apitecture bouwt intelligente data services."
+  tagline: "Breng data tot leven."
+  url: https://www.apitecture.nl
+  color: FF5901
+- name: Open Hack
+  logo: /assets/img/openhack.png
+  role: Organisator
+  description: "Open Hack organiseert hack dagen."
+  tagline: "Voor coders, door coders."
+  url: http://www.openhack.nl
+  color: EB009E
