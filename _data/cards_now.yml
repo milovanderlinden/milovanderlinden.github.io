@@ -1,14 +1,22 @@
 - name: TiltShift
-  logo: /assets/img/tiltshift.jpg
+  logo: /assets/img/tiltshift.png
   role: Managing Partner<br>Strategy, Technology & Marketing
   description: "design & innovatie voor de publieke sector"
   tagline: "Haal innovatie in huis!"
   url: http://www.tiltshift.nl
-  color: F95A5D;
+  color: EA4337;
+
+- name: clowder.IT i.o.
+  logo: /assets/img/clowderit.png
+  role: Managing Partner<br>Strategy & Marketing
+  description: "open source #govtech software as a service"
+  tagline: "Open source zonder gedoe."
+  url: https://www.clowder.it
+  color: 'C30052'
 
 - name: Stichting Code for NL
   logo: /assets/img/codefornl.png
-  role: Community Manager, Secretaris
+  role: Secretaris<br>Community Manager
   description: "netwerk van developers en designers"
   tagline: "Samenwerken aan de digitale overheid."
   url: http://codefor.nl
@@ -17,7 +25,7 @@
 - name: Datalab Amsterdam
   logo: /assets/img/datalabamsterdam.png
   role: Productstrateeg Fixxx<br>Innovatieve Toepassingen
-  description: "werkplaats voor digitale transformaties"
+  description: "digitale transformatie van de Gemeente Amsterdam"
   tagline: "Snelle innovatie die werkt!"
   url: https://www.amsterdam.nl/bestuur-organisatie/organisatie/overige/datalab-amsterdam/
   color: EC0000;
@@ -30,17 +38,9 @@
   url: http://www.nldesignsystem.nl
   color: '004152'
 
-- name: clowder.IT
-  logo: /assets/img/clowderit.png
-  role: Managing Partner<br>Strategy & Marketing
-  description: "open source #govtech software as a service"
-  tagline: "Open source zonder gedoe."
-  url: https://www.clowder.it
-  color: 'C30052'
-
 - name: Herenboeren Rotterdam
   logo: /assets/img/herenboeren.png
-  role: Lid, Adviseur Digitale Participatie
+  role: 
   description: "kleinschalig gemengd coöperatief boerenbedrijf"
   tagline: "Samen Duurzaam Voedsel Produceren."
   url: https://www.herenboeren.nl/
