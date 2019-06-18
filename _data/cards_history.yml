@@ -1,3 +1,11 @@
+- name: Apitecture
+  logo: /assets/img/apitecture.png
+  role: Data Serivces Consultant, Eigenaar
+  description: "advanced data services"
+  tagline: "Breng data tot leven."
+  url: https://www.apitecture.nl
+  color: FF5901
+
 - name: The Next Ad
   logo: /assets/img/thenextad.png
   role: Head of Product Development
