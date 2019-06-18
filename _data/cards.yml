@@ -46,10 +46,10 @@
   # url: http://www.openhack.nl
   # color: EB009E
 
-- name: Apitecture
-  logo: /assets/img/apitecture.png
-  role: Data Serivces Consultant, Eigenaar
-  description: "advanced data services"
-  tagline: "Breng data tot leven."
-  url: https://www.apitecture.nl
-  color: FF5901
+# - name: Apitecture
+#   logo: /assets/img/apitecture.png
+#   role: Data Serivces Consultant, Eigenaar
+#   description: "advanced data services"
+#   tagline: "Breng data tot leven."
+#   url: https://www.apitecture.nl
+#   color: FF5901
