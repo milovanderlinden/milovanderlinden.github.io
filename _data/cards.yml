@@ -38,6 +38,14 @@
   url: https://www.clowder.it
   color: 'C30052'
 
+- name: Herenboeren Rotterdam
+  logo: /assets/img/herenboeren.png
+  role: Lid, Adviseur Digitale Participatie
+  description: "kleinschalig gemengd coöperatief boerenbedrijf"
+  tagline: "Samen Duurzaam Voedsel Produceren."
+  url: https://www.herenboeren.nl/
+  color: '858A4C'
+
   #- name: Open Hack
   # logo: /assets/img/openhack.png
   # role: Organisator Open Hack
