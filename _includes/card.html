@@ -1,0 +1,11 @@
+<a style="background: white; height: 220px; position: relative; text-decoration: none; border: 0" class="tile" href="{{ card.url }}">
+  <div style="display: flex; padding: 10px">
+    <img style="flex-basis: 120px" class="tile" src="{{ card.logo }}">
+    <div style="width: 100%; text-align: right">
+      <div style="font-size: 1.2em; line-height: 1.4em; margin-top: 0.8em; color: #{{ card.color }}">{{ card.name }}</div>
+      <div style="font-weight: 100; font-size: 1em; line-height: 1.4em; margin-top: 0.4em">{{ card.role }}</div>
+    </div>
+  </div>
+  <div style="font-size: 0.9em; line-height: 1.2em; margin-top: 1em">{{ card.description }}</div>
+  <div style="position: absolute; bottom: 0; width: 100%; color: white; background: #{{ card.color }}; font-weight: 100; font-size: 1em; line-height: 1em; padding: 0.5em 0; margin-top: 0.4em">{{ card.tagline }}</div>
+</a>

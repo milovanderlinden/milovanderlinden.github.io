@@ -1,28 +1,55 @@
-- name: Apitecture
-  logo: /assets/img/apitecture.png
-  role: Eigenaar Apitecture
-  description: "Apitecture bouwt intelligente data services."
-  tagline: "Breng data tot leven."
-  url: https://www.apitecture.nl
-  color: FF5901
 - name: TiltShift
   logo: /assets/img/tiltshift.jpg
-  role: Co-founder TiltShift
-  description: "TiltShift helpt gemeenten bij digitale transformatie."
+  role: Managing Partner<br>Strategy, Technology & Marketing
+  description: "design & innovatie voor de publieke sector"
   tagline: "Haal innovatie in huis!"
   url: http://www.tiltshift.nl
   color: F95A5D;
-- name: Code for NL
+
+- name: Stichting Code for NL
   logo: /assets/img/codefornl.png
-  role: Bestuurslid Code for NL
-  description: "Code for NL is een netwerk van developers en designers."
+  role: Community Manager, Secretaris
+  description: "netwerk van developers en designers"
   tagline: "Samenwerken aan de digitale overheid."
   url: http://codefor.nl
   color: 51D59D
-- name: Open Hack
-  logo: /assets/img/openhack.png
-  role: Organisator Open Hack
-  description: "Open Hack organiseert hack dagen."
-  tagline: "Voor coders, door coders."
-  url: http://www.openhack.nl
-  color: EB009E
+
+- name: Datalab Amsterdam
+  logo: /assets/img/datalabamsterdam.png
+  role: Strateeg Fixxx<br>Innovatieve Toepassingen
+  description: "werkplaats voor digitale transformaties"
+  tagline: "Snelle innovatie die werkt!"
+  url: https://www.amsterdam.nl/bestuur-organisatie/organisatie/overige/datalab-amsterdam/
+  color: EC0000;
+
+- name: NL Design System
+  logo: /assets/img/nldesignsystem.png
+  role: Consultant
+  description: "gezamenlijk design system voor Nederlandse overheden"
+  tagline: "Één overheid."
+  url: http://www.nldesignsystem.nl
+  color: '004152'
+
+- name: clowder.IT
+  logo: /assets/img/clowderit.png
+  role: Managing Partner<br>Strategy & Marketing
+  description: "open source #govtech software as a service"
+  tagline: "Open source zonder gedoe."
+  url: https://www.clowder.it
+  color: 'C30052'
+
+  #- name: Open Hack
+  # logo: /assets/img/openhack.png
+  # role: Organisator Open Hack
+  # description: "Open Hack organiseert hack dagen."
+  # tagline: "Voor coders, door coders."
+  # url: http://www.openhack.nl
+  # color: EB009E
+
+- name: Apitecture
+  logo: /assets/img/apitecture.png
+  role: Data Serivces Consultant, Eigenaar
+  description: "advanced data services"
+  tagline: "Breng data tot leven."
+  url: https://www.apitecture.nl
+  color: FF5901

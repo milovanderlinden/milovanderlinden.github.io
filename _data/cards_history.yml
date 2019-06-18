@@ -1,0 +1,15 @@
+- name: The Next Ad
+  logo: /assets/img/thenextad.png
+  role: Head of Product Development
+  description: "social media advertising platform"
+  tagline: "The Ultimate Partner for Digital Advertising."
+  url: http://www.thenextad.com
+  color: 2E3543;
+
+- name: Media Injection
+  logo: /assets/img/mediainjection.png
+  role: Platform Architect
+  description: "social media management platform"
+  tagline: "Manage all your social accounts in one platform."
+  url: http://www.mediainjection.com
+  color: 42C4DD;
