@@ -1,9 +1,9 @@
 body, html {
     font-family: Source Sans Pro,Helvetica,Arial,sans-serif;
-    color: #959595;
+    color: #555;
 }
 a {
-    color: #959595;
+    color: #555;
 }
 .box {
     background: white;
@@ -31,10 +31,11 @@ h1, h2 {
   font-weight: 300;
 }
 h1 {
-  color: #959595;
+  color: #7985AD;
+  font-weight: 300
 }
 h2 {
-  color: #262626;
+  color: #555;
   font-size: 1.2em;
   line-height: 1.5em;
 }
