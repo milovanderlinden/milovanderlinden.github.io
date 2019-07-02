@@ -22,6 +22,14 @@
   url: http://codefor.nl
   color: 51D59D
 
+- name: NL Design System
+  logo: /assets/img/nldesignsystem.png
+  role: Adviseur<br>Tech Lead
+  description: "gezamenlijk design system voor Nederlandse overheden"
+  tagline: "Één overheid."
+  url: http://www.nldesignsystem.nl
+  color: '004152'
+
 - name: Datalab Amsterdam
   logo: /assets/img/datalabamsterdam.png
   role: Productstrateeg Fixxx<br>Innovatieve Toepassingen
@@ -30,17 +38,9 @@
   url: https://www.amsterdam.nl/bestuur-organisatie/organisatie/overige/datalab-amsterdam/
   color: EC0000;
 
-- name: NL Design System
-  logo: /assets/img/nldesignsystem.png
-  role: Consultant
-  description: "gezamenlijk design system voor Nederlandse overheden"
-  tagline: "Één overheid."
-  url: http://www.nldesignsystem.nl
-  color: '004152'
-
 - name: Herenboeren Rotterdam
   logo: /assets/img/herenboeren.png
-  role: 
+  role:
   description: "kleinschalig gemengd coöperatief boerenbedrijf"
   tagline: "Samen Duurzaam Voedsel Produceren."
   url: https://www.herenboeren.nl/
