@@ -20,7 +20,7 @@ a {
     width: 200px;
     height: 200px;
     border-radius: 200px;
-    background: url(/assets/img/johan.jpg) center center no-repeat;
+    background: center center no-repeat;
     background-size: cover;
     border: 8px solid white;
     box-shadow: 0px 2px 2px #aaa;

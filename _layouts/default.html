@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body style="text-align: center; max-width: 40em; margin: auto; background: url({{ page.banner }}) top center no-repeat;">
+
+        <div class="box">
+
+            <div class="img" style="background-image: url({{ page.image }})"></div>
+
+            <h1>{{ page.person_name }}</h1>
+
+            <h2 style="max-width: 300px; margin: auto">{{ page.title }}</h2>
+            <h2 style="font-size: 1em; color: #7985AD">{{ page.subtitle }}</h2>
+
+            <p>{{ page.message }}</p>
+
+            {% include banner.html %}
+
+            {% include cards.html %}
+
+    </body>
+</html>

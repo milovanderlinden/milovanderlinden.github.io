@@ -1,3 +1,11 @@
+- name: Datalab Amsterdam
+  logo: /assets/img/datalabamsterdam.png
+  role: Adviseur Innovatieve Toepassingen
+  description: "datagedreven werken in de praktijk brengen"
+  tagline: "Data, informatie, en kennis"
+  url: https://www.amsterdam.nl/bestuur-organisatie/organisatie/overige/datalab-amsterdam/
+  color: EC0000;
+
 - name: Apitecture
   logo: /assets/img/apitecture.png
   role: Freelance API Engineer

@@ -1,55 +1,23 @@
 - name: TiltShift
   logo: /assets/img/tiltshift.png
-  role: Managing Partner<br>Strategy, Technology & Marketing
-  description: "design & innovatie voor de publieke sector"
-  tagline: "Haal innovatie in huis!"
+  role: CEO<br>Strategie & Marketing
+  description: "software design & innovatie voor de publieke sector"
+  tagline: "Good public tech"
   url: http://www.tiltshift.nl
   color: EA4337;
 
-- name: clowder.IT i.o.
-  logo: /assets/img/clowderit.png
-  role: Managing Partner<br>Strategy & Marketing
-  description: "open source #govtech software as a service"
-  tagline: "Open source zonder gedoe."
-  url: https://www.clowder.it
-  color: 'C30052'
+- name: TiltShift Apps
+  logo: /assets/img/tiltshift_apps.png
+  role: CEO<br>Strategie & Marketing
+  description: "software as a service, beheer en ondersteuning"
+  tagline: "De beste tools op zak"
+  url: http://www.tiltshiftapps.nl
+  color: F8CD28;
 
 - name: Stichting Code for NL
   logo: /assets/img/codefornl.png
-  role: Secretaris<br>Community Manager
-  description: "netwerk van developers en designers"
+  role: Penningmeester<br>Strateeg
+  description: "community van developers en designers"
   tagline: "Samenwerken aan de digitale overheid."
   url: http://codefor.nl
   color: 51D59D
-
-- name: NL Design System
-  logo: /assets/img/nldesignsystem.png
-  role: Adviseur
-  description: "gezamenlijk design system voor Nederlandse overheden"
-  tagline: "Één overheid."
-  url: http://www.nldesignsystem.nl
-  color: '004152'
-
-- name: Datalab Amsterdam
-  logo: /assets/img/datalabamsterdam.png
-  role: Productstrateeg Fixxx<br>Innovatieve Toepassingen
-  description: "digitale transformatie van de Gemeente Amsterdam"
-  tagline: "Snelle innovatie die werkt!"
-  url: https://www.amsterdam.nl/bestuur-organisatie/organisatie/overige/datalab-amsterdam/
-  color: EC0000;
-
-- name: Herenboeren Rotterdam
-  logo: /assets/img/herenboeren.png
-  role:
-  description: "kleinschalig gemengd coöperatief boerenbedrijf"
-  tagline: "Samen Duurzaam Voedsel Produceren."
-  url: https://www.herenboeren.nl/
-  color: '858A4C'
-
-  #- name: Open Hack
-  # logo: /assets/img/openhack.png
-  # role: Organisator Open Hack
-  # description: "Open Hack organiseert hack dagen."
-  # tagline: "Voor coders, door coders."
-  # url: http://www.openhack.nl
-  # color: EB009E

@@ -1,10 +1,11 @@
 <div class="cards">
-  <h1>Hier ben ik mee bezig</h1>
-  {% for card in site.data.cards_now %}
+  {% assign cards = site.data.cards_now %}
+  <h1>{{ site.data.text.cards_now_section_header }}</h1>
+  {% for card in cards %}
     {% include card.html %}
   {% endfor %}
 
-  <h1>Dit deed ik eerder</h1>
+  <h1>{{ site.data.text.cards_history_section_header }}</h1>
   {% for card in site.data.cards_history %}
     {% include card.html %}
   {% endfor %}
