@@ -1,0 +1,23 @@
+<script>
+
+    function getUrlParameterValue(key) {
+        var urlParameterStrings = window.location.search.substr(1).split('&');
+        var urlParameters = {};
+        urlParameterStrings.forEach(function (urlParameter) {
+            var parts = urlParameter.split('=');
+            urlParameters[parts[0]] = parts[1];
+        });
+        return urlParameters[key];
+    }
+
+    var dataUrl = getUrlParameterValue('data');
+
+    $.getJSON(dataUrl, function (data) {
+        $("[data-id=name]").html(data.member.name);
+        $("[data-id=image").css({"background-image": 'url(' + data.member.image + ')'});
+        $("[data-id=motto").html(data.member.motto);
+        $("[data-id=tags").html(data.member.tags.join(" · "));
+        $("[data-id=status").html(data.member.status);
+    });
+
+</script>
