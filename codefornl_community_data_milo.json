@@ -1,0 +1,46 @@
+{
+    "member": {
+        "name": "Milo",
+        "motto": "een betere wereld begint met open ogen, open armen, en open hart",
+        "image": "https://heroesoftech.com/content/uploads/2018/04/milo.jpg",
+        "banner": "https://i.ytimg.com/vi/7VYKVYzYzY8/hqdefault.jpg",
+        "tags": [
+            "coder",
+            "hacker",
+            "devops",
+            "vader",
+            "verbinder",
+            "geo-informaticus"
+        ],
+        "status": "Bouwen aan een betere wereld"
+    },
+    "cards": [
+        {
+          "name": "DogoDigi",
+          "logo": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/5c2f6076f65125b88e9a8056/picture",
+          "role": "Directeur<br>Programmeur",
+          "description": "het onmogelijke waarmaken",
+          "tagline": "Niet praten maar doen!",
+          "url": "http://www.dogodigi.net/",
+          "color": "222222"
+        },
+      {
+        "name": "TiltShift Apps",
+        "logo": "https://www.jgroenen.nl/assets/img/tiltshift_apps.png",
+        "role": "DevOps",
+        "description": "software as a service, beheer en ondersteuning",
+        "tagline": "De beste tools op zak",
+        "url": "http://www.tiltshiftapps.nl",
+        "color": "F8CD28"
+      },
+      {
+        "name": "Stichting Code for NL",
+        "logo": "https://www.jgroenen.nl/assets/img/codefornl.png",
+        "role": "Voorzitter<br>Community Member",
+        "description": "community van developers en designers",
+        "tagline": "Samenwerken aan de digitale overheid.",
+        "url": "http://codefor.nl",
+        "color": "51D59D"
+      }
+    ]
+}

@@ -18,6 +18,29 @@
         $("[data-id=motto").html(data.member.motto);
         $("[data-id=tags").html(data.member.tags.join(" · "));
         $("[data-id=status").html(data.member.status);
+        $("body").css({"background-image": 'url(' + data.member.banner + ')'});
+
+        $(".tiltshift_banner").hide();
+        $(".card").hide();
+
+        data.cards.forEach(function (card) {
+            var $card = $(".card").first().clone().show();
+            $("[data-id=url", $card)
+                .attr("href", card.url);
+            $("[data-id=logo", $card)
+                .attr("src", card.logo);
+            $("[data-id=name]", $card)
+                .css({"color": "#" + card.color})
+                .html(card.name);
+            $("[data-id=role", $card)
+                .html(card.role);
+            $("[data-id=description", $card)
+                .html(card.description);
+            $("[data-id=tagline]", $card)
+                .css({"background": "#" + card.color})
+                .html(card.tagline);
+            $(".cards").append($card);
+        });
     });
 
 </script>

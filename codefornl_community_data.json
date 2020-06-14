@@ -1,17 +1,46 @@
 {
     "member": {
-        "name": "Johan Groenen",
-        "motto": "public interest technologist; open, eerlijk, inclusief",
-        "image": "https://www.jgroenen.nl/assets/img/johan.jpg",
-        "banner": "https://www.jgroenen.nl/assets/img/linkedin_header.jpg",
-        "tags": [
-            "verbinder",
-            "beelddenker",
-            "onstopbare&nbsp;brainstormer",
-            "designer",
-            "developer",
-            "informaticus"
-        ],
-        "status": "Maak een afspraak via www.tiltshift.nl"
-    }
-}
+      "name": "Johan Groenen",
+      "motto": "public interest technologist; open, eerlijk, inclusief",
+      "image": "https://www.jgroenen.nl/assets/img/johan.jpg",
+      "banner": "https://www.jgroenen.nl/assets/img/linkedin_header.jpg",
+      "tags": [
+        "verbinder",
+        "beelddenker",
+        "onstopbare&nbsp;brainstormer",
+        "designer",
+        "developer",
+        "informaticus"
+      ],
+      "status": "Maak een afspraak via www.tiltshift.nl"
+    },
+    "cards": [
+      {
+        "name": "TiltShift",
+        "logo": "https://www.jgroenen.nl/assets/img/tiltshift.png",
+        "role": "CEO<br>Strategie & Marketing",
+        "description": "software design & innovatie voor de publieke sector",
+        "tagline": "Good public tech",
+        "url": "http://www.tiltshift.nl",
+        "color": "EA4337;"
+      },
+      {
+        "name": "TiltShift Apps",
+        "logo": "https://www.jgroenen.nl/assets/img/tiltshift_apps.png",
+        "role": "CEO<br>Strategie & Marketing",
+        "description": "software as a service, beheer en ondersteuning",
+        "tagline": "De beste tools op zak",
+        "url": "http://www.tiltshiftapps.nl",
+        "color": "F8CD28;"
+      },
+      {
+        "name": "Stichting Code for NL",
+        "logo": "https://www.jgroenen.nl/assets/img/codefornl.png",
+        "role": "Penningmeester<br>Strateeg",
+        "description": "community van developers en designers",
+        "tagline": "Samenwerken aan de digitale overheid.",
+        "url": "http://codefor.nl",
+        "color": "51D59D"
+      }
+    ]
+  }

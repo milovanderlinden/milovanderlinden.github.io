@@ -4,7 +4,7 @@
   description: "software design & innovatie voor de publieke sector"
   tagline: "Good public tech"
   url: http://www.tiltshift.nl
-  color: EA4337;
+  color: EA4337
 
 - name: TiltShift Apps
   logo: /assets/img/tiltshift_apps.png
@@ -12,7 +12,7 @@
   description: "software as a service, beheer en ondersteuning"
   tagline: "De beste tools op zak"
   url: http://www.tiltshiftapps.nl
-  color: F8CD28;
+  color: F8CD28
 
 - name: Stichting Code for NL
   logo: /assets/img/codefornl.png
