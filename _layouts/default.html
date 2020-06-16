@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='width=320,initial-scale=1,user-scalable=0'>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="author" content="Johan Groenen (c) 2020">
+        
+        <link rel='image_src' href='{{ page.image }}'/>
+        <link rel='shortcut icon' type='image/png' href='{{ page.image }}'>
+        
+        <title>{{ page.title }}</title>
+        <meta name="title" content="{{ page.title }}">
+        <meta name="description" content="{{ page.description }}">
+        <meta name="keywords" content="{{ page.keywords }}">
+        
+        <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles.css">
+        
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-834340-4']); // FIXME
+            _gaq.push(['_setDomainName', 'jgroenen.nl']); // FIXME
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+<body itemscope itemtype="http://data-vocabulary.org/Person">
+        <div class="showoff no-mobile no-print" style="background-image: url({{ page.banner }})"></div>
+        <div class="wrapper">
+            <header>
+                <h1 itemprop="name">{{ page.title }}</h1>
+                <h2 class="no-print" itemprop="title">{{ page.subtitle }}</h2>
+                <img class="photo no-print" src="{{ page.image }}" style="max-width: 199px; max-height: 199px" alt="">
+                <h3 class="no-print">{{ page.description }} <i>{{ page.quote }}</i></h3>
+                <section class="contact">
+                    <div>
+                        <img class="icon" src="img/home.png" alt="Adres: " style="float: left">
+                        <p itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address" style="float: left; margin: 0 4px; padding-top: 6px">
+                            <span itemprop="street-address">{{ page.street-address }}</span><br>
+                            <span itemprop="postal-code">{{ page.postal-code }}</span> <span itemprop="locality">{{ page.locality }}</span>
+                        </p>
+                        <p style="clear: both"></p>
+                    </div>
+                    <p>
+                        <img class="icon" src="img/mobile.png" alt="Telefoon: ">
+                        <a href="tel:{{ page.phone }}">{{ page.phone }}</a>
+                    </p>
+                    <p>
+                        <img class="icon" src="img/email.png" alt="E-mail: ">
+                        <a href="mailto:{{ page.email }}">{{ page.email }}</a>
+                    </p>
+                    <p>
+                        <img class="icon" src="img/connected.png" alt="LinkedIn: ">
+                        <span style="display: inline-block; width: 210px; vertical-align: top; padding-top: 6px">
+                            <a style="line-height: 1.4em" href="https://www.linkedin.com/in/{{ page.linkedin-handle }}">linkedin.com/in/{{ page.linkedin-handle }}</a>
+                            <a  class="no-print" style="line-height: 1.4em" href="https://twitter.com/{{ page.twitter-handle }}"><br>twitter.com/{{ page.twitter-handle }}</a>
+                            <a  class="no-print" style="line-height: 1.4em" href="https://github.com/{{ page.github-handle }}"><br>github.com/{{ page.github-handle }}</a>
+                        </span>
+                    </p>
+                    <p class="no-print no-mobile">
+                        <a href="javascript:window.print()"><img class="icon" src="img/print.png" alt="Printen: ">print deze pagina</a>
+                    </p>
+                    <p>
+                        <img class="icon" src="img/line-globe.png" alt="Website: ">
+                        <a itemprop="url" href="{{ site.url }}">{{ site.url }}</a>
+                    </p>
+                </section>
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ site.url }}" alt="">
+            </header>
+            <main>
+                <section>
+                    <h1><img class="icon" src="img/briefcase.png" alt="">Ervaring</h1>
+                    {% for item in page.experience %}
+                        <section class="ervaring">
+                            <header>
+                                <h2 itemprop="affiliation">{{ item.organization }}</h2>
+                                <h1>{{ item.title }}</h1>
+                                <p>{{ item.location }}, {{ item.start-date }} - {{ item.end-date }}</p>
+                                <p><a href="{{ item.url }}">{{ item.url }}</a></p>
+                            </header>
+                            <main>
+                                <p><i>{{ item.intro }}</i></p>
+                                <p>{{ item.description }}</p>
+                            </main>
+                            <div class="clear"></div>
+                        </section>
+                    {% endfor %}
+                </section>
+                
+                <section>
+                    <h1><img class="icon" src="img/bookmark.png" alt="">Kennis</h1>
+                    {% for item in page.knowledge %}
+                    <section class="ervaring">
+                        <header>
+                            <h2 itemprop="affiliation">{{ item.organization }}</h2>
+                            <h1>{{ item.title }}</h1>
+                            <p>{{ item.location }}, {{ item.start-date }} - {{ item.end-date }}</p>
+                            <p><a href="{{ item.url }}">{{ item.url }}</a></p>
+                        </header>
+                        <main>
+                            <p><i>{{ item.intro }}</i></p>
+                            <p>{{ item.description }}</p>
+                        </main>
+                        <div class="clear"></div>
+                    </section>
+                    {% endfor %}
+                </section>
+                
+                <section>
+                    <h1><img class="icon" src="img/configuration02.png" alt="">Skills</h1>
+                    <p>
+                        <ul>
+                            {% for skill in page.skills %}
+                            <li class="tag">{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </p>
+                </section>
+                <section class="no-print">
+                    <h1><img class="icon" src="img/next-item.png" alt="">Overige</h1>
+                    <p>
+                        <ul>
+                            {% for link in page.links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a>, {{ link.description }}.</li>
+                            {% endfor %}
+                        </ul>
+                    </p>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
