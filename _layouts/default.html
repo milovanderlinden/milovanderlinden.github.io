@@ -32,30 +32,31 @@
             })();
         </script>
     </head>
-    <body itemscope itemtype="http://data-vocabulary.org/Person">
+    <body itemscope itemtype="https://schema.org/Person">
         <div class="showoff no-mobile no-print" style="background-image: url({{ page.basics._banner }})"></div>
         <div class="wrapper">
             <header>
                 <h1 itemprop="name">{{ page.basics.name }}</h1>
-                <h2 class="no-print" itemprop="title">{{ page.basics.label }}</h2>
-                <img class="photo no-print" src="{{ page.basics.picture }}" style="max-width: 199px; max-height: 199px" alt="">
-                <h3 class="no-print">{{ page.basics.summary }} <i>{{ page.quote }}</i></h3>
-                <section class="contact">
+                <h2 itemprop="jobTitle" class="no-print" itemprop="title">{{ page.basics.label }}</h2>
+                <img itemprop="image" class="photo no-print" src="{{ page.basics.picture }}" style="max-width: 199px; max-height: 199px" alt="Foto van {{ page.basics.name }}">
+                <h3 itemprop="description" class="no-print">{{ page.basics.summary }} <i>{{ page.quote }}</i></h3>
+                <section class="contact" itemscope itemtype="https://schema.org/Address">
                     <div>
                         <img class="icon" src="img/home.png" alt="Adres: " style="float: left">
-                        <p itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address" style="float: left; margin: 0 4px; padding-top: 6px">
-                            <span itemprop="street-address">{{ page.basics.location.address }}</span><br>
-                            <span itemprop="postal-code">{{ page.basics.location.postalCode }}</span> <span itemprop="locality">{{ page.basics.location.city }}</span>
+                        <p style="float: left; margin: 0 4px; padding-top: 6px">
+                            <span itemprop="streetAddress">{{ page.basics.location.address }}</span><br>
+                            <span itemprop="postalCode">{{ page.basics.location.postalCode }}</span>
+                            <span itemprop="addressLocality">{{ page.basics.location.city }}</span>
                         </p>
                         <p style="clear: both"></p>
                     </div>
                     <p>
                         <img class="icon" src="img/mobile.png" alt="Telefoon: ">
-                        <a href="tel:{{ page.basics.phone }}">{{ page.basics.phone }}</a>
+                        <a itemprop="telephone" href="tel:{{ page.basics.phone }}">{{ page.basics.phone }}</a>
                     </p>
                     <p>
                         <img class="icon" src="img/email.png" alt="E-mail: ">
-                        <a href="mailto:{{ page.basics.email }}">{{ page.basics.email }}</a>
+                        <a itemprop="email" href="mailto:{{ page.basics.email }}">{{ page.basics.email }}</a>
                     </p>
                     <p>
                         <img class="icon" src="img/connected.png" alt="LinkedIn: ">
@@ -160,6 +161,7 @@
                 CC-BY JOHAN GROENEN 2020<br>
                 https://jsonresume.org/schema/<br>
                 http://microformats.org/wiki/hcard<br>
+                schema.org<br>
             </div>
         </footer>
     </body>
