@@ -12,6 +12,24 @@
         <meta name="title" content="{{ page.basics.name }} {{ page.basics.label }}">
         <meta name="description" content="{{ page.basics.summary }}">
         <meta name="keywords" content="{{ page.keywords }}">
+
+        <meta property='og:url' content='{{ site.url }}'>
+        <meta property='og:title' name='title' content="{{ page.basics.name }} {{ page.basics.label }}">
+        <meta property='og:description' name='description' content="{{ page.basics.summary }}">
+        <meta property='og:image' content="{{ page.basics.picture }}">
+        <link rel='image_src' href="{{ page.basics.picture }}"/>
+        <meta name='keywords' content="
+            {% for skill in page.skills %}
+                {{ skill.name }},
+                {% for keyword in skill.keywords %}{{ keyword }},{% endfor %}
+            {% endfor %}
+        ">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:username" content="{{ page.basics._twitter_handle }}">
+        <meta name="twitter:title" content="{{ page.basics.name }} {{ page.basics.label }}">
+        <meta name="twitter:description" content="{{ page.basics.summary }}">
+        <meta name="twitter:image:src" content="{{ page.basics.picture }}">
         
         <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles.css">
