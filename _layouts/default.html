@@ -32,31 +32,31 @@
             })();
         </script>
     </head>
-    <body itemscope itemtype="https://schema.org/Person">
+    <body class="vcard" itemscope itemtype="https://schema.org/Person">
         <div class="showoff no-mobile no-print" style="background-image: url({{ page.basics._banner }})"></div>
         <div class="wrapper">
             <header>
-                <h1 itemprop="name">{{ page.basics.name }}</h1>
+                <h1 class="fn" itemprop="name">{{ page.basics.name }}</h1>
                 <h2 itemprop="jobTitle" class="no-print" itemprop="title">{{ page.basics.label }}</h2>
                 <img itemprop="image" class="photo no-print" src="{{ page.basics.picture }}" style="max-width: 199px; max-height: 199px" alt="Foto van {{ page.basics.name }}">
                 <h3 itemprop="description" class="no-print">{{ page.basics.summary }} <i>{{ page.quote }}</i></h3>
-                <section class="contact" itemscope itemtype="https://schema.org/Address">
-                    <div>
+                <section class="contact">
+                    <div class="adr" itemscope itemtype="https://schema.org/Address">
                         <img class="icon" src="img/home.png" alt="Adres: " style="float: left">
                         <p style="float: left; margin: 0 4px; padding-top: 6px">
-                            <span itemprop="streetAddress">{{ page.basics.location.address }}</span><br>
-                            <span itemprop="postalCode">{{ page.basics.location.postalCode }}</span>
-                            <span itemprop="addressLocality">{{ page.basics.location.city }}</span>
+                            <span class="street-address" itemprop="streetAddress">{{ page.basics.location.address }}</span><br>
+                            <span class="postal-code" itemprop="postalCode">{{ page.basics.location.postalCode }}</span>
+                            <span class="locality" itemprop="addressLocality">{{ page.basics.location.city }}</span>
                         </p>
                         <p style="clear: both"></p>
                     </div>
                     <p>
                         <img class="icon" src="img/mobile.png" alt="Telefoon: ">
-                        <a itemprop="telephone" href="tel:{{ page.basics.phone }}">{{ page.basics.phone }}</a>
+                        <a class="tel" itemprop="telephone" href="tel:{{ page.basics.phone }}">{{ page.basics.phone }}</a>
                     </p>
                     <p>
                         <img class="icon" src="img/email.png" alt="E-mail: ">
-                        <a itemprop="email" href="mailto:{{ page.basics.email }}">{{ page.basics.email }}</a>
+                        <a class="email" itemprop="email" href="mailto:{{ page.basics.email }}">{{ page.basics.email }}</a>
                     </p>
                     <p>
                         <img class="icon" src="img/connected.png" alt="LinkedIn: ">
@@ -71,7 +71,7 @@
                     </p>
                     <p>
                         <img class="icon" src="img/line-globe.png" alt="Website: ">
-                        <a itemprop="url" href="{{ page.basics.website }}">{{ page.basics.website | replace: "https://", "" | replace: "www.", "" }}</a>
+                        <a class="url" itemprop="url" href="{{ page.basics.website }}">{{ page.basics.website | replace: "https://", "" | replace: "www.", "" }}</a>
                     </p>
                 </section>
                 <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ page.basics.website }}" alt="">
