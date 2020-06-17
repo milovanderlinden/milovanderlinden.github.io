@@ -39,7 +39,7 @@
                 <h1 class="fn" itemprop="name">{{ page.basics.name }}</h1>
                 <h2 itemprop="jobTitle" class="no-print" itemprop="title">{{ page.basics.label }}</h2>
                 <img itemprop="image" class="photo no-print" src="{{ page.basics.picture }}" style="max-width: 199px; max-height: 199px" alt="Foto van {{ page.basics.name }}">
-                <h3 itemprop="description" class="no-print">{{ page.basics.summary }} <i>{{ page.quote }}</i></h3>
+                <h3 itemprop="description" class="no-print">{{ page.basics.summary }} <i>{{ page.basics._quote }}</i></h3>
                 <section class="contact">
                     <div class="adr" itemscope itemtype="https://schema.org/Address">
                         <img class="icon" src="img/home.png" alt="Adres: " style="float: left">
@@ -88,8 +88,8 @@
                                 <p><a href="{{ item.website }}">{{ item.website }}</a></p>
                             </header>
                             <main>
-                                <p><i>{{ item.summary }}</i></p>
-                                <p>{{ item.void }}</p>
+                                <p><i>{{ item._motto }}</i></p>
+                                <p>{{ item.summary }}</p>
                             </main>
                             <div class="clear"></div>
                         </section>
@@ -107,8 +107,8 @@
                                 <p><a href="{{ item.website }}">{{ item.website }}</a></p>
                             </header>
                             <main>
-                                <p><i>{{ item.summary }}</i></p>
-                                <p>{{ item.void }}</p>
+                                <p><i>{{ item._motto }}</i></p>
+                                <p>{{ item.summary }}</p>
                             </main>
                             <div class="clear"></div>
                         </section>
@@ -140,6 +140,9 @@
                         <ul>
                             {% for skill in page.skills %}
                             <li class="tag">{{ skill.name }}</li>
+                                {% for keyword in skill.keywords %}
+                                    <li class="tag">{{ keyword }}</li>
+                                {% endfor %}
                             {% endfor %}
                         </ul>
                     </p>
