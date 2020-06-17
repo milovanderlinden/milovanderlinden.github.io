@@ -5,12 +5,12 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="author" content="Johan Groenen (c) 2020">
         
-        <link rel='image_src' href='{{ page.image }}'/>
-        <link rel='shortcut icon' type='image/png' href='{{ page.image }}'>
+        <link rel='image_src' href='{{ page.basics.picture }}'/>
+        <link rel='shortcut icon' type='image/png' href='{{ page.basics.picture }}'>
         
-        <title>{{ page.title }}</title>
-        <meta name="title" content="{{ page.title }}">
-        <meta name="description" content="{{ page.description }}">
+        <title>{{ page.basics.name }}</title>
+        <meta name="title" content="{{ page.basics.name }} {{ page.basics.label }}">
+        <meta name="description" content="{{ page.basics.summary }}">
         <meta name="keywords" content="{{ page.keywords }}">
         
         <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
@@ -32,37 +32,37 @@
             })();
         </script>
     </head>
-<body itemscope itemtype="http://data-vocabulary.org/Person">
-        <div class="showoff no-mobile no-print" style="background-image: url({{ page.banner }})"></div>
+    <body itemscope itemtype="http://data-vocabulary.org/Person">
+        <div class="showoff no-mobile no-print" style="background-image: url({{ page.basics._banner }})"></div>
         <div class="wrapper">
             <header>
-                <h1 itemprop="name">{{ page.title }}</h1>
-                <h2 class="no-print" itemprop="title">{{ page.subtitle }}</h2>
-                <img class="photo no-print" src="{{ page.image }}" style="max-width: 199px; max-height: 199px" alt="">
-                <h3 class="no-print">{{ page.description }} <i>{{ page.quote }}</i></h3>
+                <h1 itemprop="name">{{ page.basics.name }}</h1>
+                <h2 class="no-print" itemprop="title">{{ page.basics.label }}</h2>
+                <img class="photo no-print" src="{{ page.basics.picture }}" style="max-width: 199px; max-height: 199px" alt="">
+                <h3 class="no-print">{{ page.basics.summary }} <i>{{ page.quote }}</i></h3>
                 <section class="contact">
                     <div>
                         <img class="icon" src="img/home.png" alt="Adres: " style="float: left">
                         <p itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address" style="float: left; margin: 0 4px; padding-top: 6px">
-                            <span itemprop="street-address">{{ page.street-address }}</span><br>
-                            <span itemprop="postal-code">{{ page.postal-code }}</span> <span itemprop="locality">{{ page.locality }}</span>
+                            <span itemprop="street-address">{{ page.basics.location.address }}</span><br>
+                            <span itemprop="postal-code">{{ page.basics.location.postalCode }}</span> <span itemprop="locality">{{ page.basics.location.city }}</span>
                         </p>
                         <p style="clear: both"></p>
                     </div>
                     <p>
                         <img class="icon" src="img/mobile.png" alt="Telefoon: ">
-                        <a href="tel:{{ page.phone }}">{{ page.phone }}</a>
+                        <a href="tel:{{ page.basics.phone }}">{{ page.basics.phone }}</a>
                     </p>
                     <p>
                         <img class="icon" src="img/email.png" alt="E-mail: ">
-                        <a href="mailto:{{ page.email }}">{{ page.email }}</a>
+                        <a href="mailto:{{ page.basics.email }}">{{ page.basics.email }}</a>
                     </p>
                     <p>
                         <img class="icon" src="img/connected.png" alt="LinkedIn: ">
                         <span style="display: inline-block; width: 210px; vertical-align: top; padding-top: 6px">
-                            <a style="line-height: 1.4em" href="https://www.linkedin.com/in/{{ page.linkedin-handle }}">linkedin.com/in/{{ page.linkedin-handle }}</a>
-                            <a  class="no-print" style="line-height: 1.4em" href="https://twitter.com/{{ page.twitter-handle }}"><br>twitter.com/{{ page.twitter-handle }}</a>
-                            <a  class="no-print" style="line-height: 1.4em" href="https://github.com/{{ page.github-handle }}"><br>github.com/{{ page.github-handle }}</a>
+                            {% for profile in page.basics.profiles %}
+                            <a style="line-height: 1.4em" href="{{ profile.url }}">{{ profile.url | replace: "https://", "" | replace: "www.", "" }}</a>
+                            {% endfor %}
                         </span>
                     </p>
                     <p class="no-print no-mobile">
@@ -70,25 +70,44 @@
                     </p>
                     <p>
                         <img class="icon" src="img/line-globe.png" alt="Website: ">
-                        <a itemprop="url" href="{{ site.url }}">{{ site.url }}</a>
+                        <a itemprop="url" href="{{ page.basics.website }}">{{ page.basics.website | replace: "https://", "" | replace: "www.", "" }}</a>
                     </p>
                 </section>
-                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ site.url }}" alt="">
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ page.basics.website }}" alt="">
             </header>
             <main>
                 <section>
+                    <h1><img class="icon" src="img/briefcase.png" alt="">Werk</h1>
+                    {% for item in page.work %}
+                        <section class="ervaring">
+                            <header>
+                                <h2 itemprop="affiliation">{{ item.company }}</h2>
+                                <h1>{{ item.position }}</h1>
+                                <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
+                                <p><a href="{{ item.website }}">{{ item.website }}</a></p>
+                            </header>
+                            <main>
+                                <p><i>{{ item.summary }}</i></p>
+                                <p>{{ item.void }}</p>
+                            </main>
+                            <div class="clear"></div>
+                        </section>
+                    {% endfor %}
+                </section>
+
+                <section>
                     <h1><img class="icon" src="img/briefcase.png" alt="">Ervaring</h1>
-                    {% for item in page.experience %}
+                    {% for item in page.volunteer %}
                         <section class="ervaring">
                             <header>
                                 <h2 itemprop="affiliation">{{ item.organization }}</h2>
-                                <h1>{{ item.title }}</h1>
-                                <p>{{ item.location }}, {{ item.start-date }} - {{ item.end-date }}</p>
-                                <p><a href="{{ item.url }}">{{ item.url }}</a></p>
+                                <h1>{{ item.position }}</h1>
+                                <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
+                                <p><a href="{{ item.website }}">{{ item.website }}</a></p>
                             </header>
                             <main>
-                                <p><i>{{ item.intro }}</i></p>
-                                <p>{{ item.description }}</p>
+                                <p><i>{{ item.summary }}</i></p>
+                                <p>{{ item.void }}</p>
                             </main>
                             <div class="clear"></div>
                         </section>
@@ -97,17 +116,17 @@
                 
                 <section>
                     <h1><img class="icon" src="img/bookmark.png" alt="">Kennis</h1>
-                    {% for item in page.knowledge %}
+                    {% for item in page.education %}
                     <section class="ervaring">
                         <header>
-                            <h2 itemprop="affiliation">{{ item.organization }}</h2>
-                            <h1>{{ item.title }}</h1>
-                            <p>{{ item.location }}, {{ item.start-date }} - {{ item.end-date }}</p>
-                            <p><a href="{{ item.url }}">{{ item.url }}</a></p>
+                            <h2 itemprop="affiliation">{{ item.institution }}</h2>
+                            <h1>{{ item.area }}</h1>
+                            <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
+                            <p><a href="{{ item._website }}">{{ item._website }}</a></p>
                         </header>
                         <main>
-                            <p><i>{{ item.intro }}</i></p>
-                            <p>{{ item.description }}</p>
+                            <p><i>{{ item._summary }}</i></p>
+                            <p>{{ item.void }}</p>
                         </main>
                         <div class="clear"></div>
                     </section>
@@ -119,7 +138,7 @@
                     <p>
                         <ul>
                             {% for skill in page.skills %}
-                            <li class="tag">{{ skill }}</li>
+                            <li class="tag">{{ skill.name }}</li>
                             {% endfor %}
                         </ul>
                     </p>
@@ -128,7 +147,7 @@
                     <h1><img class="icon" src="img/next-item.png" alt="">Overige</h1>
                     <p>
                         <ul>
-                            {% for link in page.links %}
+                            {% for link in page._links %}
                             <li><a href="{{ link.url }}">{{ link.title }}</a>, {{ link.description }}.</li>
                             {% endfor %}
                         </ul>
@@ -136,5 +155,12 @@
                 </section>
             </main>
         </div>
+        <footer style="background: #aaa; clear: both" class="no-print">
+            <div class="wrapper" style="color: #fff; line-height: 1.4em; padding: 1em">
+                CC-BY JOHAN GROENEN 2020<br>
+                https://jsonresume.org/schema/<br>
+                http://microformats.org/wiki/hcard<br>
+            </div>
+        </footer>
     </body>
 </html>

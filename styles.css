@@ -48,7 +48,7 @@ section header p {
     color: #999;
 }
 a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #0099D4;
 }
 p {
