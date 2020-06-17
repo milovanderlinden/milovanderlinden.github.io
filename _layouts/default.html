@@ -59,7 +59,7 @@
                 <img itemprop="image" class="photo no-print" src="{{ page.basics.picture }}" style="max-width: 199px; max-height: 199px" alt="Foto van {{ page.basics.name }}">
                 <h3 itemprop="description" class="no-print">{{ page.basics.summary }} <i>{{ page.basics._quote }}</i></h3>
                 <section class="contact">
-                    <div class="adr">
+                    <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <img class="icon" src="img/home.png" alt="Adres: " style="float: left">
                         <p style="float: left; margin: 0 4px; padding-top: 6px">
                             <span class="street-address" itemprop="streetAddress">{{ page.basics.location.address }}</span><br>
