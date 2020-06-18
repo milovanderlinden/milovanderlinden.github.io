@@ -1,171 +1,135 @@
 ---
+layout: person
 ---
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name='viewport' content='width=320,initial-scale=1,user-scalable=0'>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="author" content="Johan Groenen (c) 2020">
-        
-        <link rel='image_src' href='{{ site.data.person.picture }}'/>
-        <link rel='shortcut icon' type='image/png' href='{{ site.data.person.picture }}'>
-        
-        <title>{{ site.data.person.name }}</title>
-        <meta name="title" content="{{ site.data.person.name }} {{ site.data.person.label }}">
-        <meta name="description" content="{{ site.data.person.summary }}">
-        <meta name="keywords" content="{{ site.data.resume.keywords }}">
-
-        <meta property='og:url' content='{{ site.url }}'>
-        <meta property='og:title' name='title' content="{{ site.data.person.name }} {{ site.data.person.label }}">
-        <meta property='og:description' name='description' content="{{ site.data.person.summary }}">
-        <meta property='og:image' content="{{ site.data.person.picture }}">
-        <link rel='image_src' href="{{ site.data.person.picture }}"/>
-        <meta name='keywords' content="
-            {% for skill in site.data.resume.skills %}
-                {{ skill.name }},
-                {% for keyword in skill.keywords %}{{ keyword }},{% endfor %}
+<header>
+    <h1 class="fn" itemprop="name">{{ site.data.person.name }}</h1>
+    <h2 itemprop="jobTitle" class="no-print">{{ site.data.resume.label }}</h2>
+    <img itemprop="image" class="photo no-print" src="{{ site.data.person.picture }}" style="max-width:100%"
+        alt="Foto van {{ site.data.person.name }}">
+    <h3 itemprop="description" class="no-print">{{ site.data.resume.summary }} <i>{{ site.data.person._quote }}</i>
+    </h3>
+    <section class="contact">
+        <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <p style="float: left; margin: 0 4px; padding-top: 6px">
+                <span class="street-address" itemprop="streetAddress">{{ site.data.address.streetAddress }}</span><br>
+                <span class="postal-code" itemprop="postalCode">{{ site.data.address.postalCode }}</span>
+                <span class="locality" itemprop="addressLocality">{{ site.data.address.addressLocality }}</span>
+            </p>
+            <p style="clear: both"></p>
+        </div>
+        <p>
+            <a class="tel" itemprop="telephone"
+                href="tel:{{ site.data.person.telephone }}">{{ site.data.person.telephone }}</a>
+        </p>
+        <p>
+            <a class="email" itemprop="email"
+                href="mailto:{{ site.data.person.email }}">{{ site.data.person.email }}</a>
+        </p>
+        <p>
+            <span style="display: inline-block; width: 210px; vertical-align: top; padding-top: 6px">
+                {% for profile in site.data.profiles %}
+                <a style="line-height: 1.4em"
+                    href="{{ profile.url }}">{{ profile.url | replace: "https://", "" | replace: "www.", "" }}</a>
+                {% endfor %}
+            </span>
+        </p>
+        <p class="no-print no-mobile">
+            <a href="javascript:window.print()">print deze pagina</a>
+        </p>
+        <p>
+            <a class="url" itemprop="url"
+                href="{{ site.data.person.website }}">{{ site.data.person.website | replace: "https://", "" | replace: "www.", "" }}</a>
+        </p>
+    </section>
+    <section class="skills">
+        <h1>Skills</h1>
+        <ul>
+            {% for skill in site.data.skills %}
+            <li class="skill">
+                <h2>{{ skill.name }}<small>{{ skill.level }}</small></h2>
+            </li>
+            {% for keyword in skill.keywords %}
+            <li class="tag">{{ keyword }}</li>
             {% endfor %}
-        ">
-        
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:username" content="{{ site.data.person._twitter_handle }}">
-        <meta name="twitter:title" content="{{ site.data.person.name }} {{ site.data.resume.label }}">
-        <meta name="twitter:description" content="{{ site.data.person.summary }}">
-        <meta name="twitter:image:src" content="{{ site.data.person.picture }}">
-        
-        <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body class="vcard" itemscope itemtype="https://schema.org/Person">
-        <div class="wrapper">
+            {% endfor %}
+        </ul>
+    </section>
+    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ site.data.person.website }}"
+        alt="">
+</header>
+<main>
+    <section class="occupations">
+        <h1>Ervaring</h1>
+        {% for item in site.data.occupations %}
+        <article class="occupation">
             <header>
-                <h1 class="fn" itemprop="name">{{ site.data.person.name }}</h1>
-                <h2 itemprop="jobTitle" class="no-print" itemprop="title">{{ site.data.resume.label }}</h2>
-                <img itemprop="image" class="photo no-print" src="{{ site.data.person.picture }}" style="max-width:100%" alt="Foto van {{ site.data.person.name }}">
-                <h3 itemprop="description" class="no-print">{{ site.data.resume.summary }} <i>{{ site.data.person._quote }}</i></h3>
-                <section class="contact">
-                    <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <p style="float: left; margin: 0 4px; padding-top: 6px">
-                            <span class="street-address" itemprop="streetAddress">{{ site.data.address.streetAddress }}</span><br>
-                            <span class="postal-code" itemprop="postalCode">{{ site.data.address.postalCode }}</span>
-                            <span class="locality" itemprop="addressLocality">{{ site.data.address.addressLocality }}</span>
-                        </p>
-                        <p style="clear: both"></p>
-                    </div>
-                    <p>
-                        <a class="tel" itemprop="telephone" href="tel:{{ site.data.person.telephone }}">{{ site.data.person.telephone }}</a>
-                    </p>
-                    <p>
-                        <a class="email" itemprop="email" href="mailto:{{ site.data.person.email }}">{{ site.data.person.email }}</a>
-                    </p>
-                    <p>
-                        <span style="display: inline-block; width: 210px; vertical-align: top; padding-top: 6px">
-                            {% for profile in site.data.profiles %}
-                            <a style="line-height: 1.4em" href="{{ profile.url }}">{{ profile.url | replace: "https://", "" | replace: "www.", "" }}</a>
-                            {% endfor %}
-                        </span>
-                    </p>
-                    <p class="no-print no-mobile">
-                        <a href="javascript:window.print()">print deze pagina</a>
-                    </p>
-                    <p>
-                        <a class="url" itemprop="url" href="{{ site.data.person.website }}">{{ site.data.person.website | replace: "https://", "" | replace: "www.", "" }}</a>
-                    </p>
-                </section>
-                <section>
-                    <h1>Skills</h1>
-                    <p>
-                        <ul>
-                            {% for skill in site.data.skills %}
-                            <li class="skill"><h2>{{ skill.name }}<small>{{ skill.level }}</small></h2></li>
-                                {% for keyword in skill.keywords %}
-                                    <li class="tag">{{ keyword }}</li>
-                                {% endfor %}
-                            {% endfor %}
-                        </ul>
-                    </p>
-                </section>
-                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ site.data.person.website }}" alt="">
+                <h1>{{ item.position }}</h1>
+                {% if item.website %}
+                <p itemprop="affiliation"><a href="{{ item.website }}">{{ item.company }}</a></p>
+                {% else %}
+                <p itemprop="affiliation">{{ item.company }}</p>
+                {% endif %}
+                <p>{{ item._location }}, {{ item.startDate }} -
+                    {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}</p>
             </header>
             <main>
-                <section>
-                    <h1>Werk</h1>
-                    {% for item in site.data.occupations %}
-                        <section class="ervaring">
-                            <header>
-                                <h1>{{ item.position }}</h1>
-                                {% if item.website %}
-                                <p itemprop="affiliation"><a href="{{ item.website }}">{{ item.company }}</a></p>
-                                {% else %}
-                                <p itemprop="affiliation">{{ item.company }}</p>
-                                {% endif %}
-                                <p>{{ item._location }}, {{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}</p>
-                            </header>
-                            <main>
-                                <p><i>{{ item._motto }}</i></p>
-                                <p>{{ item.summary }}</p>
-                                <ul style="list-style:circle">
-                                    {% for role in item.roles %}
-                                    <li>{{ role }}</li>
-                                    {% endfor %}
-                                </ul>
-                                
-                            </main>
-                            <div class="clear"></div>
-                        </section>
+                <p><i>{{ item._motto }}</i></p>
+                <p>{{ item.summary }}</p>
+                <ul style="list-style:circle">
+                    {% for role in item.roles %}
+                    <li>{{ role }}</li>
                     {% endfor %}
-                </section>
+                </ul>
 
-                <section>
-                    <h1>Vrijwilligerswerk</h1>
-                    {% for item in site.data.volunteer %}
-                        <section class="ervaring">
-                            <header>
-                                <h1>{{ item.position }}</h1>
-                                {% if item.website %}
-                                <p itemprop="affiliation"><a href="{{ item.website }}">{{ item.organization }}</a></p>
-                                {% else %}
-                                <p itemprop="affiliation">{{ item.organization }}</p>
-                                {% endif %}
-                                <p>
-                                    {% if item._location %}{{ item._location }}{% endif %}{% if item._location and item.startDate %}, {% endif %}{% if item.startDate %}{{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}{% endif %}
-                                </p>
-                            </header>
-                            <main>
-                                <p><i>{{ item._motto }}</i></p>
-                                <p>{{ item.summary }}</p>
-                            </main>
-                            <div class="clear"></div>
-                        </section>
-                    {% endfor %}
-                </section>
-                
-                <section>
-                    <h1>Opleiding</h1>
-                    {% for item in site.data.education %}
-                    <section class="ervaring">
-                        <header>
-                            <h2 itemprop="affiliation">{{ item.institution }}</h2>
-                            <p>{{ item._location }}, {{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}</p>
-                            <p><a href="{{ item._website }}">{{ item._website }}</a></p>
-                        </header>
-                        <main>
-                            <p>{{ item.area }}</p>
-                            <p><i>{{ item._summary }}</i></p>
-                            <p>{{ item.void }}</p>
-                        </main>
-                        <div class="clear"></div>
-                    </section>
-                    {% endfor %}
-                </section>
-                
-               
             </main>
-        </div>
-        <footer class="no-print">
-            <div class="wrapper" style="color: #fff; line-height: 1.4em; padding: 1em">
-                CC-BY JOHAN GROENEN 2020 https://jsonresume.org/schema/ http://microformats.org/wiki/hcard schema.org
-            </div>
-        </footer>
-    </body>
-</html>
+            <div class="clear"></div>
+        </article>
+        {% endfor %}
+    </section>
+
+    <section class="volunteers">
+        <h1>Vrijwilligerswerk</h1>
+        {% for item in site.data.volunteer %}
+        <article class="volunteer">
+            <header>
+                <h1>{{ item.position }}</h1>
+                {% if item.website %}
+                <p itemprop="affiliation"><a href="{{ item.website }}">{{ item.organization }}</a></p>
+                {% else %}
+                <p itemprop="affiliation">{{ item.organization }}</p>
+                {% endif %}
+                <p>
+                    {% if item._location %}{{ item._location }}{% endif %}{% if item._location and item.startDate %},
+                    {% endif %}{% if item.startDate %}{{ item.startDate }} -
+                    {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}{% endif %}
+                </p>
+            </header>
+            <main>
+                <p><i>{{ item._motto }}</i></p>
+                <p>{{ item.summary }}</p>
+            </main>
+            <div class="clear"></div>
+        </article>
+        {% endfor %}
+    </section>
+
+    <section class="educations">
+        <h1>Opleiding</h1>
+        {% for item in site.data.education %}
+        <article class="education">
+            <header>
+                <h2 itemprop="affiliation">{{ item.institution }}</h2>
+                <p>{{ item._location }}, {{ item.startDate }} -
+                    {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}</p>
+                <p><a href="{{ item._website }}">{{ item._website }}</a></p>
+            </header>
+            <main>
+                <p>{{ item.area }}</p>
+                <p><i>{{ item._summary }}</i></p>
+                <p>{{ item.void }}</p>
+            </main>
+            <div class="clear"></div>
+        </article>
+        {% endfor %}
+    </section>
+</main>

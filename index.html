@@ -1,3 +1,43 @@
-<p><a href="resume.html">CV</a></p>
-<p><a href="https://registry.jsonresume.org/milovanderlinden">CV via jsonresume</a></p>
-<p><a href="resume.json">CV als json</a></p>
+---
+layout: default
+---
+<header style="width:75%">
+    <h1 class="fn" itemprop="name">{{ site.data.person.name }}</h1>
+    <h2 itemprop="jobTitle" class="no-print">{{ site.data.resume.label }}</h2>
+    <h3 itemprop="description" class="no-print">{{ site.data.resume.summary }} <i>{{ site.data.person._quote }}</i></h3>
+    <section class="contact">
+        <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <p style="float: left; margin: 0 4px; padding-top: 6px">
+                <span class="street-address" itemprop="streetAddress">{{ site.data.address.streetAddress }}</span><br>
+                <span class="postal-code" itemprop="postalCode">{{ site.data.address.postalCode }}</span>
+                <span class="locality" itemprop="addressLocality">{{ site.data.address.addressLocality }}</span>
+            </p>
+            <p style="clear: both"></p>
+        </div>
+        <p>
+            <a class="tel" itemprop="telephone"
+                href="tel:{{ site.data.person.telephone }}">{{ site.data.person.telephone }}</a>
+        </p>
+        <p>
+            <a class="email" itemprop="email"
+                href="mailto:{{ site.data.person.email }}">{{ site.data.person.email }}</a>
+        </p>
+        <p>
+            <span style="display: inline-block; width: 210px; vertical-align: top; padding-top: 6px">
+                {% for profile in site.data.profiles %}
+                <a style="line-height: 1.4em"
+                    href="{{ profile.url }}">{{ profile.url | replace: "https://", "" | replace: "www.", "" }}</a>
+                {% endfor %}
+            </span>
+        </p>
+        <p>
+            <a class="url" itemprop="url"
+                href="{{ site.data.person.website }}">{{ site.data.person.website | replace: "https://", "" | replace: "www.", "" }}</a>
+        </p>
+    </section>
+</header>
+<main>
+<h2><a href="resume.html">CV</a></h2>
+<h2><a href="https://registry.jsonresume.org/milovanderlinden">CV via jsonresume</a></h2>
+<h2><a href="resume.json">CV als json</a></h2>
+</main>
