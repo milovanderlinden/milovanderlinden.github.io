@@ -4,30 +4,18 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 100%;
     font-weight: 100;
-    color: #fff;
-    background-color: rgb(26, 26, 26);
-}
-h1, h2, h3 {
-    font-family: "Courier New", Courier, monospace;
 }
 
 h1 {
     font-size: 2em;
-    color: #fc4349;
     margin: 0.4em 0;
-    
     font-weight: 900;
 }
-strong {
-    color: #fff;
-}
+
 h2 {
     font-size: 1.6em;
     margin: 0.2em 0;
-    color: #fff;
     font-weight: 400;
 }
 h3 {
@@ -40,15 +28,7 @@ section header h1 {
 section header h2 {
     font-size: 1em;
 }
-section header p {
-    color: rgb(255, 255, 255);
-}
-a {
-    /* text-decoration: none; */
-    color: #fc4349;
-    text-decoration: none;
-    font-weight: bold;
-}
+
 p {
     max-width: 40em;
 }
@@ -61,8 +41,6 @@ li {
 }
 .tag {
     display: inline-block;
-    background: #0099D4;
-    color: #fff;
     margin: 4px;
     padding: 4px 6px;
     border-radius: 2px;
@@ -84,18 +62,13 @@ li {
     width: 25%;
     /*page-break-after: always;*/
 }
-.wrapper > header h1,
-.wrapper > header h2,
-.wrapper > header h3 {
-    text-align: center;
-}
+
 .wrapper > header .photo {
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 .wrapper > header .qr {
     display: block;
-    margin: 20px 0 40px 34px;
 }
 .wrapper > header .icon {
     margin-right: 4px;
@@ -139,7 +112,6 @@ li {
 }
 
 footer {
-    background-color: #000;
     clear: both;
 }
 @media all and (max-width: 960px) {
@@ -187,9 +159,7 @@ footer {
     .photo {
         float: right;
     }
-    a {
-        color: #222;
-    }
+
     .contact {
         float: left;
         margin-bottom: 20px;

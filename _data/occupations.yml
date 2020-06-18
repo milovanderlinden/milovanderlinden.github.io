@@ -30,3 +30,10 @@
   endDate: December 2019
   summary: Verantwoordelijk voor het beheren van de Rancher/k8s omgeving voor project “Proeftuin Digitale Participatie” van BZK t.b.v. 5 gemeenten.
   _location: Amsterdam
+- company: Gemeente Eindhoven
+  position: Code Fellow
+  website: https://enabl.ist
+  startDate: November 2015
+  endDate: Mei 2017
+  summary: Full stack development. DevOps. Civic tech. Omdat de gemeente niet kon faciliteren, zelfstandig voor de 3 Code Fellows de Rancher Docker omgeving beheerd met CI/CD voor een 7-tal Civictech applicaties.
+  _location: Eindhoven
