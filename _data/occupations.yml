@@ -1,7 +1,6 @@
 - company: CZSK
   position: LTZ2 SD
-  startDate: Januari 2018
-  endDate: heden
+  startDate: 2018-01
   roles: 
     - "OBL AMO KMR"
     - "(Cyber) Risk assessment specialist/assistant, SIGINT en OSINT"
@@ -10,8 +9,7 @@
   _location: Den Helder
 - company: Ministerie van Defensie
   position: Architect/DevOps
-  startDate: Juli 2017
-  endDate: heden
+  startDate: 2017-07
   summary: Full stack developer gespecialiseerd in GIS, GPS, Track & Trace en Cartografie.
   roles:
     - Devops voor de “Common Operational Picture” voor de Koninklijke Marechaussee. Met behulp van esri GeoEvent, Portal en arcGIS; esri javascript, typescript, docker en Microsoft TFS.
@@ -21,22 +19,22 @@
 - company: Enabl.ist
   position: Beheer Proeftuin Digitale Participatie
   website: https://enabl.ist
-  startDate: Mei 2018
-  endDate: December 2019
+  startDate: 2018-05
+  endDate: 2019-12
   summary: Verantwoordelijk voor het beheren van de Rancher/k8s omgeving voor project “Proeftuin Digitale Participatie” van BZK t.b.v. 5 gemeenten.
   _location: Amsterdam
 - company: Gemeente Eindhoven
   position: Code Fellow
   website: https://enabl.ist
-  startDate: November 2015
-  endDate: Mei 2017
+  startDate: 2015-11
+  endDate: 2017-05
   summary: Full stack development. DevOps. Civic tech. Omdat de gemeente niet kon faciliteren, zelfstandig voor de 3 Code Fellows de Rancher Docker omgeving beheerd met CI/CD voor een 7-tal Civictech applicaties.
   _location: Eindhoven
 - company: Rijkswaterstaat
   position: Technisch Applicatiebeheerder
   website: https://www.rws.nl
-  startDate: Augustus 2013
-  endDate: Augustus 2015
+  startDate: 2013-10
+  endDate: 2015-10
   summary: "Verantwoordelijk voor het beheer van alle open source geospatial applicaties en services: WFS, WMS, WMTS, TMS and SOS op linux. RHEL, JBoss, MapServer, GeoServer, Oracle Spatial. Belangrijk resultaat: Rijkswaterstaat naar een 99% ISO 19115 and 19119 compliance score gebracht op het Nationaal Georegister m.b.t. metadata, voor meer dan 600 datasets."
   _location: Delft
 - company: SafetyCT
@@ -48,40 +46,40 @@
 - company: Politie Amsterdam-Amstelland
   position: GIS Adviseur
   startDate: 2010
-  endDate: September 2013
+  endDate: 2013-09
   summary: Adviseren inzake het gebruik van GIS en geospatial data door de hele organisatie.
     Mede belast met Real- time intelligence, GPS en misdaadkaarten. Grondlegger van de gedeelde inzet
     kaarten bij de kroning van Willem-Alexander.
   _location: Amsterdam
 - company: vts Politie Nederland
   position: Senior Ontwikkelaar
-  startDate: Augustus 2011
-  endDate: Augustus 2012
+  startDate: 2011-08
+  endDate: 2012-08
   summary: Senior Ontwikkelaar voor het Sherpa 3.0 meldkamer GIS systeem
   _location: Odijk
 - company: Kadaster
   position: Concept Ontwikkelaar
   startDate: 2011
-  endDate: Januari 2012
+  endDate: 2012-01
   summary: Research en Development voor het GeoRZ Lab
   _location: Apeldoorn
 - company: vts Politie Nederland
   position: Ontwikkelaar
-  startDate: April 2011
-  endDate: September 2011
+  startDate: 2011-04
+  endDate: 2011-09
   summary: Ontwikkelaar Sherpa 2.0 Burgernet. Koppeling maken en integreren tussen Intergraph Trackforce en Burgernet
   _location: Apeldoorn
 - company: Politie Amsterdam-Amstelland
   position: GIS Specialist
-  startDate: November 2009
+  startDate: 2009-11
   endDate: 2011
   summary: Consultant verantwoordelijk voor het implementeren van een breed spectrum
     aan GIS en Geo toepassingen met GPS en Web applicaties.
   _location: Amsterdam
 - company: AND Automotive
   position: Applicatie Engineer GIS
-  startDate: September 2008
-  endDate: November 2009
+  startDate: 2008-09
+  endDate: 2009-11
   summary: Navigation Data Open Source ontwikkeling Open Layers voor het
     AND proefproject map 2.0
   _location: Rotterdam

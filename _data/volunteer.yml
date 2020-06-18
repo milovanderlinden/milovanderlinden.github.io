@@ -1,8 +1,7 @@
 - organization: Stichting Code For NL
   position: Voorzitter
   website: https://codefor.nl
-  startDate: September 2017
-  endDate: heden
+  startDate: 2017-09
   summary: "Voorzitter van de Nederlandse organisatie voor Open Source en Civictech."
   _location: Den Haag
 - organization: Code For All
@@ -25,6 +24,5 @@
 - organization: OpenStreetMap
   position: Deelnemer
   website: https://www.openstreetmap.org
-  startDate: Januari 2007
-  endDate: heden
+  startDate: 2007-01
   summary: "Meewerken aan de vrije wereldkaart door het intekenen van geografische informatie en het bouwen aan tools voor de verwerking."

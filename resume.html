@@ -72,6 +72,19 @@
                         <a class="url" itemprop="url" href="{{ site.data.person.website }}">{{ site.data.person.website | replace: "https://", "" | replace: "www.", "" }}</a>
                     </p>
                 </section>
+                <section>
+                    <h1>Skills</h1>
+                    <p>
+                        <ul>
+                            {% for skill in site.data.skills %}
+                            <li class="skill"><h2>{{ skill.name }}<small>{{ skill.level }}</small></h2></li>
+                                {% for keyword in skill.keywords %}
+                                    <li class="tag">{{ keyword }}</li>
+                                {% endfor %}
+                            {% endfor %}
+                        </ul>
+                    </p>
+                </section>
                 <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ site.data.person.website }}" alt="">
             </header>
             <main>
@@ -86,7 +99,7 @@
                                 {% else %}
                                 <p itemprop="affiliation">{{ item.company }}</p>
                                 {% endif %}
-                                <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
+                                <p>{{ item._location }}, {{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}</p>
                             </header>
                             <main>
                                 <p><i>{{ item._motto }}</i></p>
@@ -115,7 +128,7 @@
                                 <p itemprop="affiliation">{{ item.organization }}</p>
                                 {% endif %}
                                 <p>
-                                    {% if item._location %}{{ item._location }}{% endif %}{% if item._location and item.startDate %}, {% endif %}{% if item.startDate %}{{ item.startDate }} - {{ item.endDate }}{% endif %}
+                                    {% if item._location %}{{ item._location }}{% endif %}{% if item._location and item.startDate %}, {% endif %}{% if item.startDate %}{{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}{% endif %}
                                 </p>
                             </header>
                             <main>
@@ -133,7 +146,7 @@
                     <section class="ervaring">
                         <header>
                             <h2 itemprop="affiliation">{{ item.institution }}</h2>
-                            <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
+                            <p>{{ item._location }}, {{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}heden {% endif %}</p>
                             <p><a href="{{ item._website }}">{{ item._website }}</a></p>
                         </header>
                         <main>
@@ -146,19 +159,7 @@
                     {% endfor %}
                 </section>
                 
-                <section>
-                    <h1>Skills</h1>
-                    <p>
-                        <ul>
-                            {% for skill in site.data.skills %}
-                            <li class="skill"><h2>{{ skill.name }}<small>{{ skill.level }}</small></h2></li>
-                                {% for keyword in skill.keywords %}
-                                    <li class="tag">{{ keyword }}</li>
-                                {% endfor %}
-                            {% endfor %}
-                        </ul>
-                    </p>
-                </section>
+               
             </main>
         </div>
         <footer class="no-print">

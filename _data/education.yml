@@ -1,17 +1,17 @@
-- endDate: '2003'
-  startDate: '2002'
+- endDate: 2003
+  startDate: 2002
   area: Geographic Information Management and Application (niet afgerond)
   studyType: Master of Science
   institution: Universiteit Utrecht
   _location: Utrecht
-- endDate: '1997'
-  startDate: '1993'
+- endDate: 1997
+  startDate: 1993
   area: Cartography, Geodesy, Geo-ICT, GeoScience
   studyType: Bachelor of Science
   institution: University of Applied Sciences Utrecht
   _location: Utrecht
-- endDate: '1989'
-  startDate: '1984'
+- endDate: 1989
+  startDate: 1984
   area: MAVO, HAVO
   studyType: Middelbare school
   institution: Cals College

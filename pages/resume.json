@@ -27,19 +27,80 @@ permalink: resume.json
         }
         {% unless forloop.index == max %},{% endunless %}
         {% endfor %}
-      ],
-      "work": [
-        {% assign max = site.data.occupations | size %}
-        {% for occupation in site.data.occupations %}
-        {
-          "company": "{{ occupation.company }}",
-          "position": "{{ occupation.position }}",
-          "startDate": "{{ occupation.startDate }}",
-          "endDate": "{{ occupation.endDate }}"
-
-        }
-        {% unless forloop.index == max %},{% endunless %}
-        {% endfor %}
       ]
-    }
+    },
+    "work": [
+      {% assign maxw = site.data.occupations | size %}
+      {% for occupation in site.data.occupations %}
+      {
+        "company": "{{ occupation.company }}",
+        "position": "{{ occupation.position }}",
+        "website": "{{ occupation.website }}",
+        {% if occupation.startDate %}"startDate": "{{ occupation.startDate }}",{% endif %}
+        {% if occupation.endDate %}"endDate": "{{ occupation.endDate }}",{% endif %}
+        "summary": "{{ occupation.summary }}",
+        "highlights": [
+          {% assign maxwroles = occupation.roles | size %}
+          {% for role in occupation.roles %}
+            "{{ role }}"
+            {% unless forloop.index == maxwroles %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+      {% unless forloop.index == maxw %},{% endunless %}
+      {% endfor %}
+    ],
+    "volunteer": [
+      {% assign maxv = site.data.volunteer | size %}
+      {% for v in site.data.volunteer %}
+      {
+        "organization": "{{ v.organization }}",
+        "position": "{{ v.position }}",
+        "website": "{{ v.website }}",
+        {% if v.startDate %}"startDate": "{{ v.startDate }}",{% endif %}
+        {% if v.endDate %}"endDate": "{{ v.endDate }}",{% endif %}
+        "summary": "{{ v.summary }}",
+        "highlights": [
+          {% assign maxvroles = v.roles | size %}
+          {% for role in v.roles %}
+            "{{ role }}"
+            {% unless forloop.index == maxvroles %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+      {% unless forloop.index == maxv %},{% endunless %}
+      {% endfor %}
+    ],
+    "education": [
+      {% assign maxe = site.data.education | size %}
+      {% for e in site.data.education %}
+      {
+        "institution": "{{ e.institution }}",
+        "area": "{{ e.area }}",
+        "website": "{{ v.website }}",
+        {% if e.startDate %}"startDate": "{{ e.startDate }}",{% endif %}
+        {% if e.endDate %}"endDate": "{{ e.endDate }}",{% endif %}
+        "studyType": "{{ e.studyType }}"
+      }
+      {% unless forloop.index == maxe %},{% endunless %}
+      {% endfor %}
+    ],
+    "skills": [
+      {% assign maxs = site.data.skills | size %}
+      {% for s in site.data.skills %}
+      {
+        "name": "{{ s.name }}",
+        "level": "{{ s.level }}",
+        "keywords": [
+          {% assign maxvkeywords = s.keywords | size %}
+          {% for keyword in s.keywords %}
+            "{{ keyword }}"
+            {% unless forloop.index == maxvkeywords %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+      {% unless forloop.index == maxs %},{% endunless %}
+      {% endfor %}
+    ]
+  
 }
