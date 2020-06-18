@@ -37,11 +37,11 @@
   endDate: 2015-10
   summary: "Verantwoordelijk voor het beheer van alle open source geospatial applicaties en services: WFS, WMS, WMTS, TMS and SOS op linux. RHEL, JBoss, MapServer, GeoServer, Oracle Spatial. Belangrijk resultaat: Rijkswaterstaat naar een 99% ISO 19115 and 19119 compliance score gebracht op het Nationaal Georegister m.b.t. metadata, voor meer dan 600 datasets."
   _location: Delft
-- company: SafetyCT
-  position: Ontwikkelaar
+- company: Falck AVD
+  position: Ontwikkelaar, Architect
   startDate: 2013
   endDate: 2015
-  summary: "Grondlegger van een product dat momenteel door SafetyCT (voormalig AVD-ICT latern Falck en in samenwerking met de OpenGeogroep) wordt uitgebaat. Ontwikkelaar, Architect."
+  summary: "Grondlegger van een product dat momenteel door SafetyCT (voorheen AVD-ICT, toen Falck AVD) in samenwerking met de OpenGeogroep wordt uitgebaat. Ontwikkelaar, Architect."
   _location: Gorinchem
 - company: Politie Amsterdam-Amstelland
   position: GIS Adviseur
