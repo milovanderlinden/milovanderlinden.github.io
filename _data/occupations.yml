@@ -1,0 +1,32 @@
+- company: CZSK Koninklijke Marine
+  position: LTZ2 SD (NATO LTJG Of-1a)
+  website: https://www.defensie.nl/organisatie/marine
+  startDate: Januari 2018
+  endDate: heden
+  summary: "Reserve officier (Cyber) Risk assessment specialist/assistant, SIGINT en OSINT"
+  _motto: Bijdragen aan een veilig Nederland
+  _location: Den Helder
+- company: Stichting Code For NL
+  position: Voorzitter
+  website: https://codefor.nl
+  startDate: September 2017
+  endDate: heden
+  summary: "Voorzitter van de Nederlandse organisatie voor Open Source en Civictech."
+  _location: Den Haag
+- company: Ministerie van Defensie
+  position: Architect/DevOps
+  startDate: Juli 2017
+  endDate: heden
+  summary: Full stack developer gespecialiseerd in GIS, GPS, Track & Trace en Cartografie.
+  roles:
+    - Devops voor de “Common Operational Picture” voor de Koninklijke Marechaussee. Met behulp van esri GeoEvent, Portal en arcGIS; esri javascript, typescript, docker en Microsoft TFS.
+    - Implementatie middels Docker van “Border Control”
+    - Adviseur en verantwoordelijk voor het leiden van het experiment voor een interne CI/CD straat voor “Containers in Productie” m.b.v. rancher, k8s en docker.
+  _location: Utrecht
+- company: Enabl.ist
+  position: Beheer Proeftuin Digitale Participatie
+  website: https://enabl.ist
+  startDate: Mei 2018
+  endDate: December 2019
+  summary: Verantwoordelijk voor het beheren van de Rancher/k8s omgeving voor project “Proeftuin Digitale Participatie” van BZK t.b.v. 5 gemeenten.
+  _location: Amsterdam

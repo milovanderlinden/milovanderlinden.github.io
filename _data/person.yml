@@ -1,29 +1,9 @@
-name: Johan Groenen
-label: Public interest technologist
-picture: https://pbs.twimg.com/profile_images/1070002308715565057/A-lpi-UL_400x400.jpg
-email: johan@tiltshift.nl
-phone: '+31641518018'
-website: https://www.jgroenen.nl
-summary: CEO TiltShift, Bestuur Code for NL, Alumni Fellow 2015 Code for NL; digitale innovatie van producten, diensten, processen, en organisatie.
-location:
-  address: Joss. de Jongln 8
-  postalCode: 3042 NH
-  city: Rotterdam
-  countryCode: NL
-  region: Zuid-Holland
-profiles:
-  - network: LinkedIn
-    username: jgroenen
-    url: https://www.linkedin.com/in/jgroenen
-  - network: Twitter
-    username: jpagroenen
-    url: https://www.twitter.nl/jpagroenen
-  - network: Github
-    username: jgroenen
-    url: https://www.github.com/jgroenen
-_quote: "The proof of the pudding is in the eating."
-_keywords: verbinder, beelddenker, onstopbare brainstormer, designer, developer, informaticus
-_banner: img/Rotterdam.jpg
-_twitter_handle: "@jpagroenen"
-_backup:
-  banner: https://www.jgroenen.nl/assets/img/linkedin_header.jpg
+type: Person
+picture: https://avatars3.githubusercontent.com/u/106038?s=400&u=2c97fd98348b320eee26bbcfae60ed318122f8b1&v=4
+email: "mailto:milo@dogodigi.net"
+website: "https://www.dogodigi.net"
+name: Milo van der Linden
+telephone: "+31616598808"
+gender: Male
+birthDate: "1971-09-28"
+jobTitle: DevOps

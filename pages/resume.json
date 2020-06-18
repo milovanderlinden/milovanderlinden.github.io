@@ -5,9 +5,9 @@ permalink: resume.json
     "meta": { "theme": "kendall" },
     "basics": {
       "name": "{{ site.data.person.name }}",
-      "label": "{{ site.data.person.label }}",
-      "image": "{{ site.data.person.image }}",
-      "summary": "{{ site.data.person.summary }}",
+      "label": "{{ site.data.person.jobTitle }}",
+      "image": "{{ site.data.person.picture }}",
+      "summary": "{{ site.data.resume.summary }}",
       "website": "{{ site.data.person.website }}",
       "email": "{{ site.data.person.email }}"
     }
