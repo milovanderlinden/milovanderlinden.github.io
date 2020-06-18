@@ -6,9 +6,40 @@ permalink: resume.json
     "basics": {
       "name": "{{ site.data.person.name }}",
       "label": "{{ site.data.person.jobTitle }}",
-      "image": "{{ site.data.person.picture }}",
+      "picture": "{{ site.data.person.picture }}",
       "summary": "{{ site.data.resume.summary }}",
       "website": "{{ site.data.person.website }}",
-      "email": "{{ site.data.person.email }}"
+      "email": "{{ site.data.person.email }}",
+      "phone": "{{ site.data.person.telephone }}",
+      "location": {
+        "address": "{{ site.data.address.streetAddress }}",
+        "postalCode": "{{ site.data.address.postalCode }}",
+        "city": "{{ site.data.address.addressLocality }}",
+        "countryCode": "{{ site.data.address.addressCountry }}",
+        "region":  "{{ site.data.address.addressRegion }}"
+      },
+      "profiles": [
+        {% assign max = site.data.profiles | size %}
+        {% for profile in site.data.profiles %}
+        {
+          "network": "{{ profile.name }}",
+          "url": "{{ profile.url}}"
+        }
+        {% unless forloop.index == max %},{% endunless %}
+        {% endfor %}
+      ],
+      "work": [
+        {% assign max = site.data.occupations | size %}
+        {% for occupation in site.data.occupations %}
+        {
+          "company": "{{ occupation.company }}",
+          "position": "{{ occupation.position }}",
+          "startDate": "{{ occupation.startDate }}",
+          "endDate": "{{ occupation.endDate }}"
+
+        }
+        {% unless forloop.index == max %},{% endunless %}
+        {% endfor %}
+      ]
     }
 }

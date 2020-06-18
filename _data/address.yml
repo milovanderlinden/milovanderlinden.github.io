@@ -1,5 +1,6 @@
 type: PostalAddress
 addressLocality: Vught
+addressCountry: NL
 addressRegion: Noord-Brabant
 postalCode: 5261LE
 streetAddress: Beukenlaan 2

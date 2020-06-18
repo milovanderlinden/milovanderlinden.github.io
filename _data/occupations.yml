@@ -1,8 +1,11 @@
-- company: CZSK Koninklijke Marine
-  position: LTZ2 SD (NATO LTJG Of-1a)
+- company: CZSK
+  position: LTZ2 SD
   startDate: Januari 2018
   endDate: heden
-  summary: "Reserve officier (Cyber) Risk assessment specialist/assistant, SIGINT en OSINT"
+  roles: 
+    - "OBL AMO KMR"
+    - "(Cyber) Risk assessment specialist/assistant, SIGINT en OSINT"
+    
   _motto: Bijdragen aan een veilig Nederland
   _location: Den Helder
 - company: Ministerie van Defensie
