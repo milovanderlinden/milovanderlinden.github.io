@@ -1,0 +1,36 @@
+- name: GIS
+  level: Expert
+  keywords:
+    - PostGIS
+    - QGIS
+    - Integration
+    - Realtime streams
+
+- name: Frontend
+  level: Senior
+  keywords:
+  - HTML
+  - JSX 
+  - Javascript
+  - Typescript
+  - Angular
+  - SolidJS
+  - Sass
+  - CSS
+  - Leaflet
+  - MapboxGL
+- name: Backend
+  level: Senior
+  keywords:
+     - Go 
+     - Php
+     - Python
+     - .Net core
+     - Node
+     - Postgres
+- name: DevOps
+  level: Senior
+  keywords:
+    - Docker
+    - Kubernetes
+    - Rancher

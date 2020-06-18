@@ -1,0 +1,30 @@
+- organization: Stichting Code For NL
+  position: Voorzitter
+  website: https://codefor.nl
+  startDate: September 2017
+  endDate: heden
+  summary: "Voorzitter van de Nederlandse organisatie voor Open Source en Civictech."
+  _location: Den Haag
+- organization: Code For All
+  position: Governing Partner
+  website: https://www.codeforall.org
+  summary: "Lid van het internationale Code For All network, actief betrokken bij het deelnemen in en ontwikkelen
+    van Civic tech Open Source in Nederland, Ierland, Duitsland, Roemenië en Polen."
+- position: Hardware
+  summary: "Hobbymatig werken aan diverse sensoring experimenten met arduino en raspberry PI"
+- position: Software
+  summary: "Bezig met het ontwikkelen van een 'hacker toolkit' bestaande uit een raspberry-pi mini-cluster met
+    kwetsbare docker containers voor onderwijsdoeleinden."
+- organization: Fundashon Kòrsou Habrí
+  website: https://opencuracao.com
+  summary: OpenStreetMap training gegeven in het Caribisch gebied, (Curaçao, Aruba, Jamaica)
+  _location: Curaçao
+- organization: Humanitarian OpenStreetMap Team
+  website: https://hot.osm.org
+  summary: Ondersteunen van humanitaire ICT (UN, Red Cross, Humanitarian OpenStreetMap Team)
+- organization: OpenStreetMap
+  position: Deelnemer
+  website: https://www.openstreetmap.org
+  startDate: Januari 2007
+  endDate: heden
+  summary: "Meewerken aan de vrije wereldkaart door het intekenen van geografische informatie en het bouwen aan tools voor de verwerking."

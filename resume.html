@@ -80,10 +80,13 @@
                     {% for item in site.data.occupations %}
                         <section class="ervaring">
                             <header>
-                                <h2 itemprop="affiliation">{{ item.company }}</h2>
                                 <h1>{{ item.position }}</h1>
+                                {% if item.website %}
+                                <p itemprop="affiliation"><a href="{{ item.website }}">{{ item.company }}</a></p>
+                                {% else %}
+                                <p itemprop="affiliation">{{ item.company }}</p>
+                                {% endif %}
                                 <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
-                                <p><a href="{{ item.website }}">{{ item.website }}</a></p>
                             </header>
                             <main>
                                 <p><i>{{ item._motto }}</i></p>
@@ -102,13 +105,18 @@
 
                 <section>
                     <h1>Vrijwilligerswerk</h1>
-                    {% for item in site.data.resume.volunteer %}
+                    {% for item in site.data.volunteer %}
                         <section class="ervaring">
                             <header>
-                                <h2 itemprop="affiliation">{{ item.organization }}</h2>
                                 <h1>{{ item.position }}</h1>
-                                <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
-                                <p><a href="{{ item.website }}">{{ item.website }}</a></p>
+                                {% if item.website %}
+                                <p itemprop="affiliation"><a href="{{ item.website }}">{{ item.organization }}</a></p>
+                                {% else %}
+                                <p itemprop="affiliation">{{ item.organization }}</p>
+                                {% endif %}
+                                <p>
+                                    {% if item._location %}{{ item._location }}{% endif %}{% if item._location and item.startDate %}, {% endif %}{% if item.startDate %}{{ item.startDate }} - {{ item.endDate }}{% endif %}
+                                </p>
                             </header>
                             <main>
                                 <p><i>{{ item._motto }}</i></p>
@@ -121,15 +129,15 @@
                 
                 <section>
                     <h1>Opleiding</h1>
-                    {% for item in site.data.resume.education %}
+                    {% for item in site.data.education %}
                     <section class="ervaring">
                         <header>
                             <h2 itemprop="affiliation">{{ item.institution }}</h2>
-                            <h1>{{ item.area }}</h1>
                             <p>{{ item._location }}, {{ item.startDate }} - {{ item.endDate }}</p>
                             <p><a href="{{ item._website }}">{{ item._website }}</a></p>
                         </header>
                         <main>
+                            <p>{{ item.area }}</p>
                             <p><i>{{ item._summary }}</i></p>
                             <p>{{ item.void }}</p>
                         </main>
@@ -142,21 +150,11 @@
                     <h1>Skills</h1>
                     <p>
                         <ul>
-                            {% for skill in site.data.resume.skills %}
-                            <li class="tag">{{ skill.name }}</li>
+                            {% for skill in site.data.skills %}
+                            <li class="skill"><h2>{{ skill.name }}<small>{{ skill.level }}</small></h2></li>
                                 {% for keyword in skill.keywords %}
                                     <li class="tag">{{ keyword }}</li>
                                 {% endfor %}
-                            {% endfor %}
-                        </ul>
-                    </p>
-                </section>
-                <section class="no-print">
-                    <h1>Overige</h1>
-                    <p>
-                        <ul>
-                            {% for link in site.data.resume._links %}
-                            <li><a href="{{ link.url }}">{{ link.title }}</a>, {{ link.description }}.</li>
                             {% endfor %}
                         </ul>
                     </p>
@@ -165,10 +163,7 @@
         </div>
         <footer class="no-print">
             <div class="wrapper" style="color: #fff; line-height: 1.4em; padding: 1em">
-                CC-BY JOHAN GROENEN 2020<br>
-                https://jsonresume.org/schema/<br>
-                http://microformats.org/wiki/hcard<br>
-                schema.org<br>
+                CC-BY JOHAN GROENEN 2020 https://jsonresume.org/schema/ http://microformats.org/wiki/hcard schema.org
             </div>
         </footer>
     </body>

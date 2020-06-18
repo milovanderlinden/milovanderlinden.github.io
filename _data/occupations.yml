@@ -1,18 +1,10 @@
 - company: CZSK Koninklijke Marine
   position: LTZ2 SD (NATO LTJG Of-1a)
-  website: https://www.defensie.nl/organisatie/marine
   startDate: Januari 2018
   endDate: heden
   summary: "Reserve officier (Cyber) Risk assessment specialist/assistant, SIGINT en OSINT"
   _motto: Bijdragen aan een veilig Nederland
   _location: Den Helder
-- company: Stichting Code For NL
-  position: Voorzitter
-  website: https://codefor.nl
-  startDate: September 2017
-  endDate: heden
-  summary: "Voorzitter van de Nederlandse organisatie voor Open Source en Civictech."
-  _location: Den Haag
 - company: Ministerie van Defensie
   position: Architect/DevOps
   startDate: Juli 2017
@@ -37,3 +29,97 @@
   endDate: Mei 2017
   summary: Full stack development. DevOps. Civic tech. Omdat de gemeente niet kon faciliteren, zelfstandig voor de 3 Code Fellows de Rancher Docker omgeving beheerd met CI/CD voor een 7-tal Civictech applicaties.
   _location: Eindhoven
+- company: Rijkswaterstaat
+  position: Technisch Applicatiebeheerder
+  website: https://www.rws.nl
+  startDate: Augustus 2013
+  endDate: Augustus 2015
+  summary: "Verantwoordelijk voor het beheer van alle open source geospatial applicaties en services: WFS, WMS, WMTS, TMS and SOS op linux. RHEL, JBoss, MapServer, GeoServer, Oracle Spatial. Belangrijk resultaat: Rijkswaterstaat naar een 99% ISO 19115 and 19119 compliance score gebracht op het Nationaal Georegister m.b.t. metadata, voor meer dan 600 datasets."
+  _location: Delft
+- company: SafetyCT
+  position: Ontwikkelaar
+  startDate: 2013
+  endDate: 2015
+  summary: "Grondlegger van een product dat momenteel door SafetyCT (voormalig AVD-ICT latern Falck en in samenwerking met de OpenGeogroep) wordt uitgebaat. Ontwikkelaar, Architect."
+  _location: Gorinchem
+- company: Politie Amsterdam-Amstelland
+  position: GIS Adviseur
+  startDate: 2010
+  endDate: September 2013
+  summary: Adviseren inzake het gebruik van GIS en geospatial data door de hele organisatie.
+    Mede belast met Real- time intelligence, GPS en misdaadkaarten. Grondlegger van de gedeelde inzet
+    kaarten bij de kroning van Willem-Alexander.
+  _location: Amsterdam
+- company: vts Politie Nederland
+  position: Senior Ontwikkelaar
+  startDate: Augustus 2011
+  endDate: Augustus 2012
+  summary: Senior Ontwikkelaar voor het Sherpa 3.0 meldkamer GIS systeem
+  _location: Odijk
+- company: Kadaster
+  position: Concept Ontwikkelaar
+  startDate: 2011
+  endDate: Januari 2012
+  summary: Research en Development voor het GeoRZ Lab
+  _location: Apeldoorn
+- company: vts Politie Nederland
+  position: Ontwikkelaar
+  startDate: April 2011
+  endDate: September 2011
+  summary: Ontwikkelaar Sherpa 2.0 Burgernet. Koppeling maken en integreren tussen Intergraph Trackforce en Burgernet
+  _location: Apeldoorn
+- company: Politie Amsterdam-Amstelland
+  position: GIS Specialist
+  startDate: November 2009
+  endDate: 2011
+  summary: Consultant verantwoordelijk voor het implementeren van een breed spectrum
+    aan GIS en Geo toepassingen met GPS en Web applicaties.
+  _location: Amsterdam
+- company: AND Automotive
+  position: Applicatie Engineer GIS
+  startDate: September 2008
+  endDate: November 2009
+  summary: Navigation Data Open Source ontwikkeling Open Layers voor het
+    AND proefproject map 2.0
+  _location: Rotterdam
+- company: 3DSite
+  position: Senior Technisch ontwikkelaar
+  startDate: 2007
+  endDate: 2009
+  summary: Systeem architect and senior ontwikkelaar voor de 3DSite 3D worlds applicaties,
+    specifiek voor bedrijventerreinen.
+  _location: Goes
+- company: Falck AVD
+  position: GIS consultant
+  startDate: 2004
+  endDate: 2007
+  summary: "Systeem architect en senior ontwikkelaar voor het CARE systeem voor het berekenen van
+    dekkingsplannen: Support, Consultancy, training en ontwikkeling."
+  _location: Gorinchem
+- company: Delta NV
+  position: Functioneel Applicatiebeheerder
+  startDate: 2002
+  endDate: 2004
+  summary: "Inrichten en faciliteren van Functioneel beheer voor de consumentenafdeling van DELTA.
+    Opgewerkt tot een afdeling met 4 FTE."
+  _location: Middelburg
+- company: NetGIS
+  position: GIS Specialist
+  startDate: 2000
+  endDate: 2002
+  summary: "Systeem architect, Consultant en ontwikkelaar voor glasvezelregistratie-systemen voor
+    Telfort, Versatel, Multikabel and Tele2."
+  _location: Burgh-Haamstede
+- company: Interstation
+  position: GIS Presales consultant
+  startDate: 1997
+  endDate: 2000
+  summary: "Verantwoordelijk voor het opzetten en demonstreren van pilot applicaties en proof of
+    concept voor MapInfo in de BeNeLux"
+  _location: Breda
+- company: Ingecon
+  position: GIS Presales consultant
+  startDate: 1995
+  endDate: 1997
+  summary: "Ontwikkelen van GIS oplossingen voor de aeronautische industrie. Na stage in dienst gekomen."
+  _location: Bennekom
