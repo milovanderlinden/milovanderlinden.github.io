@@ -1,3 +1,11 @@
 ---
 permalink: person.json
 ---
+{
+    "@context": "http://schema.org",
+    "type": "Person",
+    "name": "{{ site.data.person.name }}",
+    "jobTitle": "{{ site.data.person.jobTitle }}",
+    "url": "{{ site.data.person.website }}",
+    "telephone": "{{ site.data.person.telephone }}"
+}

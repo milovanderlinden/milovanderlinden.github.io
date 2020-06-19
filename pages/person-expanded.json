@@ -1,0 +1,10 @@
+---
+permalink: person-expanded.json
+---
+{
+    "@type":["http://schema.org/Person"],
+    "http://schema.org/name":[{"@value":"{{ site.data.person.name }}"}],
+    "http://schema.org/jobTitle":[{"@value":"{{ site.data.person.jobTitle }}"}],
+    "http://schema.org/url": [{"@value":"{{ site.data.person.website }}"}],
+    "http://schema.org/telephone": [{"@value":"{{ site.data.person.telephone }}"}]
+}
