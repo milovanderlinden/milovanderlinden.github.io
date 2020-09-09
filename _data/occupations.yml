@@ -10,9 +10,10 @@
 - company: Ministerie van Defensie
   position: Architect/DevOps
   startDate: 2017-07
+  endDate: 2020-08
   summary: Full stack developer gespecialiseerd in GIS, GPS, Track & Trace en Cartografie.
   roles:
-    - Devops voor de “Common Operational Picture” voor de Koninklijke Marechaussee. Met behulp van esri GeoEvent, Portal en arcGIS; esri javascript, typescript, docker en Microsoft TFS.
+    - Devops voor de “Common Operational Picture” voor de Koninklijke Marechaussee. Met behulp van ESRI GeoEvent, Portal en arcGIS; ESRI javascript, typescript, docker en Microsoft TFS.
     - Implementatie middels Docker van “Border Control”
     - Adviseur en verantwoordelijk voor het leiden van het experiment voor een interne CI/CD straat voor “Containers in Productie” m.b.v. rancher, k8s en docker.
   _location: Utrecht
