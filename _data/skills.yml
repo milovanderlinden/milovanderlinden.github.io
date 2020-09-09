@@ -4,13 +4,15 @@
     - PostGIS
     - QGIS
     - Integration
-    - Realtime streams
+    - Realtime
+    - ESRI
 
 - name: Frontend
   level: Senior
   keywords:
   - HTML
-  - JSX 
+  - JSX
+  - React
   - Javascript
   - Typescript
   - Angular
@@ -19,6 +21,7 @@
   - CSS
   - Leaflet
   - MapboxGL
+  - ESRI javascript
 - name: Backend
   level: Senior
   keywords:
@@ -28,6 +31,7 @@
      - .Net core
      - Node
      - Postgres
+     - Java
 - name: DevOps
   level: Senior
   keywords:
