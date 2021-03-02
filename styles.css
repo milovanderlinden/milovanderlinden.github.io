@@ -163,6 +163,7 @@ footer {
     }
     .photo {
         float: right;
+        border-radius: 50%;
     }
 
     .contact {

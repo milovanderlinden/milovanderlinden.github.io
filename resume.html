@@ -4,8 +4,6 @@ layout: person
 <header>
     <h1 class="fn" itemprop="name">{{ site.data.person.name }}</h1>
     <h2 itemprop="jobTitle" class="no-print">{{ site.data.resume.label }}</h2>
-    <img itemprop="image" class="photo no-print" src="{{ site.data.person.picture }}" style="max-width:100%"
-        alt="Foto van {{ site.data.person.name }}">
     <h3 itemprop="description" class="no-print">{{ site.data.resume.summary }} <i>{{ site.data.person._quote }}</i>
     </h3>
     <section class="contact">
@@ -54,8 +52,6 @@ layout: person
             {% endfor %}
         </ul>
     </section>
-    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ site.data.person.website }}"
-        alt="">
 </header>
 <main>
     <section class="occupations">
